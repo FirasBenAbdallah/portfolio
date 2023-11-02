@@ -6,7 +6,7 @@
 
 This repository contains the personal portfolio of Firas Ben Abdallah, a computer engineer with a focus on web and mobile development, testing, and DevOps practices.
 
-![Screenshot of the Portfolio](path_to_screenshot.png) <!-- You can add a screenshot here -->
+![Screenshot of the Portfolio](/src/assets/images/portfolio.png) <!-- You can add a screenshot here -->
 
 ## About Me
 
@@ -19,15 +19,7 @@ In my third year of engineering at l'École Supérieure Privée d'Ingénieurs et
 - **Skills**: A list of programming languages and tools I am proficient in.
 - **Testimonials**: Feedback from colleagues and peers about my professional expertise.
 - **Education**: Details of my academic background and achievements.
-
-## Technologies Used
-
-- Angular
-- ReactJS
-- Android Jetpack
-- Firebase
-- Bootstrap5
-- And many more...
+- **Experience professionnelle**: Overview of my professional work experiences and roles.
 
 ## Setup and Installation
 
