@@ -21,6 +21,14 @@ In my third year of engineering at l'École Supérieure Privée d'Ingénieurs et
 - **Education**: Details of my academic background and achievements.
 - **Experience professionnelle**: Overview of my professional work experiences and roles.
 
+## Technologies Used
+
+- ReactJS
+- Vite
+- ESLint
+- Ant Design
+- And many more...
+
 ## Setup and Installation
 
 1. Clone the repository: `git clone https://github.com/your_username/portfolio.git`
