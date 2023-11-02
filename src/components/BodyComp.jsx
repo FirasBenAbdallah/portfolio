@@ -3,7 +3,7 @@ import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
 import { experience, projects } from "../data/data";
 import AsideComp from "./AsideComp";
 
-const BodyComp = () => {
+const BodyComp = ({ language }) => {
   return (
     <div className="body-container">
       <div className="left">
@@ -59,9 +59,60 @@ const BodyComp = () => {
                   <img src={item.image} alt="project-slug" />
                 </div>
                 <div className="right">
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <Button type="link" icon={<LinkOutlined />}>
+                  <div className="projects-info">
+                    <h3>{item.title}</h3>
+                    <span>{item.date}</span>
+                  </div>
+                  {/* <p>
+                    {item.description.split("\n").map((str, index, array) =>
+                      index === array.length - 1 ? (
+                        str
+                      ) : (
+                        <>
+                          {str}
+                          <br />
+                          <span style={{ color: "#909090" }}>
+                            Environnements techniques :
+                          </span>
+                        </>
+                      )
+                    )}
+                  </p> */}
+                  <p>
+                    {item.description.split("\n").map((str, index) => {
+                      const parts = str.split(":");
+                      if (
+                        parts[0] === "Environnements techniques " ||
+                        parts[0] === "Outil de gestion " ||
+                        parts[0] === "IDE "
+                      ) {
+                        return (
+                          <span key={index}>
+                            <span style={{ color: "#909090" }}>
+                              {parts[0]}:
+                            </span>
+                            {parts[1]}
+                            <br />
+                          </span>
+                        );
+                      } else {
+                        return (
+                          <span key={index}>
+                            {str}
+                            <br />
+                          </span>
+                        );
+                      }
+                    })}
+                  </p>
+
+                  <Button
+                    type="link"
+                    icon={<LinkOutlined />}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     En savoir plus
                   </Button>
                 </div>
@@ -102,7 +153,7 @@ const BodyComp = () => {
           })}
         </section>
       </div>
-      <AsideComp />
+      <AsideComp language={language} />
     </div>
   );
 };

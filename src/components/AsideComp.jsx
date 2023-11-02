@@ -5,8 +5,9 @@ import {
 } from "@ant-design/icons";
 import { Button } from "antd";
 import { educations } from "../data/data";
+import { translationA } from "../data/translation";
 
-const AsideComp = () => {
+const AsideComp = ({ language }) => {
   return (
     <>
       <aside>
@@ -35,11 +36,11 @@ const AsideComp = () => {
           </div>
         </div>
         <div className="section">
-          <h2>Compétences</h2>
+          <h2>{translationA.title1[language]}</h2>
           <br />
           <p>
             <div class="inline-container">
-              <strong>• Langages de programmation :</strong>
+              <strong>{translationA.theme1[language]}</strong>
               <hr />
             </div>
             <br />
@@ -47,7 +48,7 @@ const AsideComp = () => {
             <br />
             <br />
             <div class="inline-container">
-              <strong>• Développement web :</strong>
+              <strong>{translationA.theme2[language]}</strong>
               <hr />
             </div>
             <br />
@@ -56,7 +57,7 @@ const AsideComp = () => {
             <br />
             <br />
             <div class="inline-container">
-              <strong>• Développement mobile :</strong>
+              <strong>{translationA.theme3[language]}</strong>
               <hr />
             </div>
             <br />
@@ -65,7 +66,7 @@ const AsideComp = () => {
             <br />
             <br />
             <div class="inline-container">
-              <strong>• Conception et gestion de bases de données :</strong>
+              <strong>{translationA.theme4[language]}</strong>
               <hr />
             </div>
             <br />
@@ -78,22 +79,14 @@ const AsideComp = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            En savoir plus sur Github
+            {translationA.link1[language]}
           </Button>
         </div>
         <div className="section">
-          <h2>Témoignages</h2>
-          <p>
-            <q>
-              Firas Ben Abdallah se distingue par son expertise approfondie en
-              tant qu'ingénieur informatique. Sa rigueur professionnelle et son
-              dévouement au métier garantissent la réussite de chaque projet
-              qu'il entreprend. Le confier une mission, c'est assurer sa
-              réalisation à la perfection.
-            </q>
-          </p>
+          <h2>{translationA.title2[language]}</h2>
+          <p>{translationA.description[language]}</p>
           <Button type="link" icon={<LinkOutlined />}>
-            En savoir plus sur LinkedIn
+            {translationA.link2[language]}
           </Button>
         </div>
         <div className="section">
@@ -111,24 +104,24 @@ const AsideComp = () => {
           })}
         </div>
         <div className="section">
-          <h2>Langues</h2>
+          <h2>{translationA.title3[language]}</h2>
           <div className="language-item">
-            <h3>Arabe</h3>
-            <span>Locuteur natif</span>
+            <h3>{translationA.language1[language]}</h3>
+            <span>{translationA.type1[language]}</span>
             <div className="full">
               <div className="percent first"></div>
             </div>
           </div>
           <div className="language-item">
-            <h3>Francais</h3>
-            <span>Competances professionnelles</span>
+            <h3>{translationA.language2[language]}</h3>
+            <span>{translationA.type2[language]}</span>
             <div className="full">
               <div className="percent second"></div>
             </div>
           </div>
           <div className="language-item">
-            <h3>Anglais</h3>
-            <span>Competances professionnelles</span>
+            <h3>{translationA.language3[language]}</h3>
+            <span>{translationA.type2[language]}</span>
             <div className="full">
               <div className="percent third"></div>
             </div>

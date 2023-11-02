@@ -25,19 +25,21 @@ export const projects = [
   },
   {
     id: 4,
-    image:
-      "https://kinsta.com/fr/wp-content/themes/kinsta/images/custom-pages/page/landing-best-wordpress-themes/screenshots/astra.jpg",
-    title: "Developpement du site web d'Astra",
+    image: "src/assets/images/Doit.jpg",
+    title: "Application Android « Do it ! »",
+    date: "| 2022",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, cumque sequi eos suscipit repellendus in quia odit, et itaque amet magni assumenda earum ullam ipsam doloribus recusandae. Voluptatibus, vitae ducimus! Laboriosam, iste! Officia quam, facere similique, libero provident vitae unde ratione commodi possimus ab minus nemo? Tempora adipisci aperiam odio aut dolores nemo a iusto quae, illum nulla, error eius! Nisi voluptatem eaque officia obcaecati reprehenderit, nesciunt qui consequatur sint voluptas dignissimos sequi magni voluptates dicta similique quas amet praesentium ipsam maiores illum fugiat, laboriosam dolore aliquam deleniti. Quod, et?",
+      "\nEnvironnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.\nOutil de gestion : Git, Postman\nIDE : Android Studio",
+    link: "https://github.com/FirasBenAbdallah/Social_Goal_Sharing.git",
   },
   {
     id: 5,
-    image:
-      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQDUnXae0wDzyMEYAaLMS5kXbVsKvwzV9Bvfhvqlg6FEm8crY87",
-    title: "Site web : Agence de developpement web",
+    image: "src/assets/images/SmartEsprit.png",
+    title: "Application Smart ESPRIT",
+    date: "| 2021",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, cumque sequi eos suscipit repellendus in quia odit, et itaque amet magni assumenda earum ullam ipsam doloribus recusandae. Voluptatibus, vitae ducimus! Laboriosam, iste! Officia quam, facere similique, libero provident vitae unde ratione commodi possimus ab minus nemo? Tempora adipisci aperiam odio aut dolores nemo a iusto quae, illum nulla, error eius! Nisi voluptatem eaque officia obcaecati reprehenderit, nesciunt qui consequatur sint voluptas dignissimos sequi magni voluptates dicta similique quas amet praesentium ipsam maiores illum fugiat, laboriosam dolore aliquam deleniti. Quod, et?",
+      "Développement d'une application de bureau appelée 'Smart ESPRIT'\nEnvironnements techniques : C, Glade, Linux, Git",
+    link: "https://github.com/FirasBenAbdallah/SmartEsprit.git",
   },
 ];
 
@@ -100,19 +102,4 @@ export const experience = [
   },
 ];
 
-/* 
-Talan Tunisie : Stage d'ingénieur Juillet 2023- Août 2023
-Développement d’une application web ‘PFE Management’
-Environnements techniques : Angular, Symfony, MySQL, Rest API,
-Bootstrap5, GitLab
-• ADDINN Group : Stage d'ingénieur Mai 2023- Juin 2023
-Développement d’une application mobile ‘Team-Addinn’
-Environnements techniques : Android Jetpack, Firebase, GitHub
-• ABCeez Digital : Stage d’été Juillet 2022-Août 2022
-Développement d’une application web front-end
-Environnements techniques : HTML5, CSS3, Bootstrap5, ReactJS,
-JavaScript
-• CCMed Belgique : Stage Secourisme Mai 2018-Juin 2018
-• Ministère de la Défense Tunisie : Lieutenant 2016-2021
 
-*/

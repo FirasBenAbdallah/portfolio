@@ -86,6 +86,16 @@
   color: #d0d0d0;
 }
 
+.projects-info {
+  display: flex;
+  align-items: center; /* Aligns items vertically centered, if you want them top-aligned, remove this */
+}
+
+.projects-info > span:last-child {
+  margin-left: auto;
+  color: #d0d0d0;
+}
+
 /* Body left part */
 .main .body-container .left {
   width: 70%;
