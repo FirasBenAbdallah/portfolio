@@ -1,5 +1,3 @@
-# React + Vite
-
 # Firas Ben Abdallah - Portfolio
 
 ## Overview
@@ -31,7 +29,7 @@ In my third year of engineering at l'École Supérieure Privée d'Ingénieurs et
 
 ## Setup and Installation
 
-1. Clone the repository: `git clone https://github.com/your_username/portfolio.git`
+1. Clone the repository: `git clone https://github.com/FirasBenAbdallah/portfolio.git`
 2. Navigate to the project directory: `cd portfolio`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
