@@ -8,7 +8,6 @@ import {
   LinkedinOutlined,
   GithubOutlined,
   GitlabFilled,
-  PhoneOutlined,
   FacebookOutlined,
   TwitterOutlined,
   MessageOutlined,
@@ -22,7 +21,7 @@ const HeaderComp = ({ language }) => {
   return (
     <header>
       <div className="left">
-        <img src={profile} alt="" />
+        <img src={profile} alt="firas img" className="firas-pic"/>
         <div className="user-infos">
           <h1>Firas Ben Abdallah</h1>
           <h3>{translationsH.subtitle[language]}</h3>
