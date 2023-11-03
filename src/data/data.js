@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     id: 4,
-    image: "src/assets/images/Doit.jpg",
+    image: "https://i.imgur.com/GQbZvqN.jpg",
     title: "Application Android « Do it ! »",
     date: "| 2022",
     description:
@@ -34,7 +34,7 @@ export const projects = [
   },
   {
     id: 5,
-    image: "src/assets/images/SmartEsprit.png",
+    image: "https://i.imgur.com/s6B6x8H.png",
     title: "Application Smart ESPRIT",
     date: "| 2021",
     description:
@@ -101,5 +101,3 @@ export const experience = [
     description: "",
   },
 ];
-
-
