@@ -43,29 +43,6 @@ export const projects = [
   },
 ];
 
-export const educations = [
-  {
-    title: "Ingénieur en informatiques",
-    name: "ESPRIT",
-    date: "| 2021-2024",
-  },
-  {
-    title: "Ingénieur en sciences appliquées aux armes",
-    name: "Académies militaires Fondek Jdid",
-    date: "| 2012-2016",
-  },
-  {
-    title: "Ecole Préparatoire Physique-Chimie",
-    name: "EPAM, Sousse",
-    date: "| 2012-2016",
-  },
-  {
-    title: "Baccalauréat mathématique",
-    name: "Mention Bien",
-    date: "| 2009-2010",
-  },
-];
-
 export const experience = [
   {
     id: 1,

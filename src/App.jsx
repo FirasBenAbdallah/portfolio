@@ -21,13 +21,41 @@ function App() {
     <>
       {isEntered ? (
         <div className="main">
-          <button
-            onClick={() =>
-              setLanguage(language === "english" ? "french" : "english")
-            }
-          >
-            {language === "english" ? "Version française" : "English version"}
-          </button>
+          <div className="horizontal-line">
+            <h1>FBA Portfolio</h1>
+            <div>
+              <button
+                className="language-btn"
+                onClick={() =>
+                  setLanguage(language === "french" ? "english" : "french")
+                }
+              >
+                {language === "french" ? (
+                  <>
+                    Version française
+                    <img
+                      width="25"
+                      height="25"
+                      src="https://img.icons8.com/emoji/48/france-emoji.png"
+                      alt="france-emoji"
+                      className="versionEmoji"
+                    />
+                  </>
+                ) : (
+                  <>
+                    English version
+                    <img
+                      width="25"
+                      height="25"
+                      src="https://img.icons8.com/color/48/great-britain.png"
+                      alt="great-britain"
+                      className="versionEmoji"
+                    />
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
           <div className={language}>
             <HeaderComp language={language} />
             <BodyComp language={language} />

@@ -4,8 +4,7 @@ import {
   MailOutlined,
 } from "@ant-design/icons";
 import { Button } from "antd";
-import { educations } from "../data/data";
-import { translationA } from "../data/translation";
+import { translationA, education } from "../data/translation";
 
 const AsideComp = ({ language }) => {
   return (
@@ -14,7 +13,7 @@ const AsideComp = ({ language }) => {
         <div className="section contacts">
           <div className="contact-item">
             <EnvironmentOutlined />
-            <span>Ariana, Tunisie</span>
+            <span>{translationA.location[language]}</span>
           </div>
           <div className="contact-item">
             <MailOutlined />
@@ -90,13 +89,13 @@ const AsideComp = ({ language }) => {
           </Button>
         </div>
         <div className="section">
-          <h2>Éducation</h2>
-          {educations.map((item, index) => {
+          <h2>{translationA.title3[language]}</h2>
+          {education.map((item, index) => {
             return (
               <div className="education-item" key={index}>
-                <h3>{item.title}</h3>
+                <h3>{item.title[language]}</h3>
                 <div className="education-item-nd">
-                  <span>{item.name}</span>
+                  <span>{item.name[language]}</span>
                   <span>{item.date}</span>
                 </div>
               </div>
@@ -104,7 +103,7 @@ const AsideComp = ({ language }) => {
           })}
         </div>
         <div className="section">
-          <h2>{translationA.title3[language]}</h2>
+          <h2>{translationA.title4[language]}</h2>
           <div className="language-item">
             <h3>{translationA.language1[language]}</h3>
             <span>{translationA.type1[language]}</span>

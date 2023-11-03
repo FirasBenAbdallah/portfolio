@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300&family=Mukta:wght@200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Open+Sans&display=swap");
+@import url("https://fonts.google.com/specimen/Cedarville+Cursive?query=Cursive");
 
 * {
   padding: 0;
@@ -14,6 +15,12 @@
   width: 100%;
   background-color: #0f0f0f;
   min-height: 100vh;
+}
+
+.versionEmoji {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
 }
 
 /* HEADER */
@@ -279,12 +286,6 @@ aside .section .language-item .third {
   display: inline-block;
 }
 
-/* .inline-container hr {
-  margin: 5px 0;
-  width: 100%; /* This ensures that the hr takes up the full width of the inline-block container *
-} 
-*/
-
 /* FOOTER */
 footer {
   background-color: #282828;
@@ -354,7 +355,7 @@ footer {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 75px;
+  width: 50px;
   height: auto;
 }
 
@@ -363,7 +364,8 @@ footer {
 }
 
 .welcome-title {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: cursive;
   font-size: 3.5rem;
   color: #333;
   margin-bottom: 15px;
@@ -401,26 +403,22 @@ footer {
   }
 }
 
-/* .welcome-container {
+.horizontal-line {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 85vh;
-  background-color: #f4f4f4;
+  justify-content: space-between;
+  padding: 0px 25px;
 }
-
-.welcome-title {
-  font-family: "Arial", sans-serif;
-  font-size: 3rem;
-  color: #333;
-  margin-bottom: 10px;
+.horizontal-line h1 {
+  color: #ffffff;
+  font-family: cursive;
 }
-
-.welcome-subtitle {
-  font-family: "Arial", sans-serif;
-  font-size: 1.5rem;
-  color: #666;
-  margin-bottom: 20px;
+.language-btn {
+  background-color: #0d6e3d;
+  color: #ffffff;
+  border: none;
+  padding: 7px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: cursive;
 }
- */
