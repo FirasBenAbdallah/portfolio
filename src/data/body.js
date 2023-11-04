@@ -8,6 +8,10 @@ export const body = {
     english: "Technical Environments :",
     french: "Environnements techniques :",
   },
+  project: {
+    english: "My recent projects",
+    french: "Mes projets récents",
+  },
 };
 
 // Translate About Me
@@ -30,42 +34,77 @@ export const projects = [
     id: 1,
     image:
       "https://cdn-developer-wp.arc.dev/wp-content/uploads/2022/06/coding-programming-project-ideas-1128x635.jpg",
-    title: "Developpement d'une application web avec Laravel et React Js",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, cumque sequi eos suscipit repellendus in quia odit, et itaque amet magni assumenda earum ullam ipsam doloribus recusandae. Voluptatibus, vitae ducimus! Laboriosam, iste! Officia quam, facere similique, libero provident vitae unde ratione commodi possimus ab minus nemo? Tempora adipisci aperiam odio aut dolores nemo a iusto quae, illum nulla, error eius! Nisi voluptatem eaque officia obcaecati reprehenderit, nesciunt qui consequatur sint voluptas dignissimos sequi magni voluptates dicta similique quas amet praesentium ipsam maiores illum fugiat, laboriosam dolore aliquam deleniti. Quod, et?",
+    title: {
+      english: "Development of a web application with Laravel and React Js",
+      french: "Developpement d'une application web avec Laravel et React Js",
+    },
+    description: {
+      english:
+        "Technical Environments : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nManagement Tool : GitLab, Postman\nIDE : Visual Studio Code",
+      french:
+        "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
+    },
   },
   {
     id: 2,
     image:
       "https://www.wisembly.com/assets/wizuploads/2022/12/page-event-en-800x704.webp",
-    title: "Developpement d'un site web d'evenements",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, cumque sequi eos suscipit repellendus in quia odit, et itaque amet magni assumenda earum ullam ipsam doloribus recusandae. Voluptatibus, vitae ducimus! Laboriosam, iste! Officia quam, facere similique, libero provident vitae unde ratione commodi possimus ab minus nemo? Tempora adipisci aperiam odio aut dolores nemo a iusto quae, illum nulla, error eius! Nisi voluptatem eaque officia obcaecati reprehenderit, nesciunt qui consequatur sint voluptas dignissimos sequi magni voluptates dicta similique quas amet praesentium ipsam maiores illum fugiat, laboriosam dolore aliquam deleniti. Quod, et?",
+    title: {
+      english: "Development of a web application with Laravel and React Js",
+      french: "Developpement d'une application web avec Laravel et React Js",
+    },
+    description: {
+      english:
+        "Technical Environments : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nManagement Tool : GitLab, Postman\nIDE : Visual Studio Code",
+      french:
+        "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
+    },
   },
   {
     id: 3,
     image:
       "https://kinsta.com/fr/wp-content/themes/kinsta/images/custom-pages/page/landing-best-wordpress-themes/screenshots/oceanwp.jpg",
-    title: "Developpement d'une application web-ecommerce",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, cumque sequi eos suscipit repellendus in quia odit, et itaque amet magni assumenda earum ullam ipsam doloribus recusandae. Voluptatibus, vitae ducimus! Laboriosam, iste! Officia quam, facere similique, libero provident vitae unde ratione commodi possimus ab minus nemo? Tempora adipisci aperiam odio aut dolores nemo a iusto quae, illum nulla, error eius! Nisi voluptatem eaque officia obcaecati reprehenderit, nesciunt qui consequatur sint voluptas dignissimos sequi magni voluptates dicta similique quas amet praesentium ipsam maiores illum fugiat, laboriosam dolore aliquam deleniti. Quod, et?",
+    title: {
+      english: "Development of an e-commerce web application",
+      french: "Developpement d'une application web-ecommerce",
+    },
+    description: {
+      english:
+        "Technical Environments : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nManagement Tool : GitLab, Postman\nIDE : Visual Studio Code",
+      french:
+        "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
+    },
   },
   {
     id: 4,
     image: "https://i.imgur.com/GQbZvqN.jpg",
-    title: "Application Android « Do it ! »",
+    title: {
+      english: "Android Application « Do it ! »",
+      french: "Application Android « Do it ! »",
+    },
     date: "| 2022",
-    description:
-      "\nEnvironnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.\nOutil de gestion : Git, Postman\nIDE : Android Studio",
+    description: {
+      english:
+        "\nTechnical Environments : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) and MongoDB.\nManagement Tool : Git, Postman\nIDE : Android Studio",
+      french:
+        "\nEnvironnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.\nOutil de gestion : Git, Postman\nIDE : Android Studio",
+    },
     link: "https://github.com/FirasBenAbdallah/Social_Goal_Sharing.git",
   },
   {
     id: 5,
     image: "https://i.imgur.com/s6B6x8H.png",
-    title: "Application Smart ESPRIT",
+    title: {
+      english: "Smart ESPRIT Application",
+      french: "Application Smart ESPRIT",
+    },
     date: "| 2021",
-    description:
-      "Développement d'une application de bureau appelée 'Smart ESPRIT'\nEnvironnements techniques : C, Glade, Linux, Git",
+    description: {
+      english:
+        "Development of a desktop application called 'Smart ESPRIT'\nTechnical Environments : C, Glade, Linux, Git",
+      french:
+        "Développement d'une application de bureau appelée 'Smart ESPRIT'\nEnvironnements techniques : C, Glade, Linux, Git",
+    },
     link: "https://github.com/FirasBenAbdallah/SmartEsprit.git",
   },
 ];

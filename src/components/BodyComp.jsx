@@ -14,7 +14,7 @@ const BodyComp = ({ language }) => {
           </article>
         </section>
         <section className="projects">
-          <h2>Mes recents projets</h2>
+          <h2>{body.project[language]}</h2>
           <article>
             <img
               className="featured-img"
@@ -49,7 +49,7 @@ const BodyComp = ({ language }) => {
                 </div>
                 <div className="right">
                   <div className="projects-info">
-                    <h3>{item.title}</h3>
+                    <h3>{item.title[language]}</h3>
                     <span>{item.date}</span>
                   </div>
                   {/* <p>
@@ -68,31 +68,35 @@ const BodyComp = ({ language }) => {
                     )}
                   </p> */}
                   <p>
-                    {item.description.split("\n").map((str, index) => {
-                      const parts = str.split(":");
-                      if (
-                        parts[0] === "Environnements techniques " ||
-                        parts[0] === "Outil de gestion " ||
-                        parts[0] === "IDE "
-                      ) {
-                        return (
-                          <span key={index}>
-                            <span style={{ color: "#909090" }}>
-                              {parts[0]}:
+                    {item.description[language]
+                      .split("\n")
+                      .map((str, index) => {
+                        const parts = str.split(":");
+                        if (
+                          parts[0] === "Environnements techniques " ||
+                          "Technical Environments " ||
+                          parts[0] === "Outil de gestion " ||
+                          "Management Tool " ||
+                          parts[0] === "IDE "
+                        ) {
+                          return (
+                            <span key={index}>
+                              <span style={{ color: "#909090" }}>
+                                {parts[0]}:
+                              </span>
+                              {parts[1]}
+                              <br />
                             </span>
-                            {parts[1]}
-                            <br />
-                          </span>
-                        );
-                      } else {
-                        return (
-                          <span key={index}>
-                            {str}
-                            <br />
-                          </span>
-                        );
-                      }
-                    })}
+                          );
+                        } else {
+                          return (
+                            <span key={index}>
+                              {str}
+                              <br />
+                            </span>
+                          );
+                        }
+                      })}
                   </p>
 
                   <Button
