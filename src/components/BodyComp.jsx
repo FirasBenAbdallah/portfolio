@@ -67,38 +67,33 @@ const BodyComp = ({ language }) => {
                       )
                     )}
                   </p> */}
+                  <p>{item.description[language]}</p>
                   <p>
-                    {item.description[language]
-                      .split("\n")
-                      .map((str, index) => {
-                        const parts = str.split(":");
-                        if (
-                          parts[0] === "Environnements techniques " ||
-                          "Technical Environments " ||
-                          parts[0] === "Outil de gestion " ||
-                          "Management Tool " ||
-                          parts[0] === "IDE "
-                        ) {
-                          return (
-                            <span key={index}>
-                              <span style={{ color: "#909090" }}>
-                                {parts[0]}:
-                              </span>
-                              {parts[1]}
-                              <br />
+                    {item.tools[language].split("\n").map((str, index) => {
+                      // Split the string at ":"
+                      const parts = str.split(":");
+                      // Check if the first part is one of the titles
+                      const isTitle = [
+                        "Environnements techniques",
+                        "Technical Environments",
+                        "Outil de gestion",
+                        "Management Tool",
+                        "IDE",
+                      ].includes(parts[0].trim());
+                      return (
+                        <span key={index}>
+                          {/* Apply the style conditionally if the part is a title */}
+                          {isTitle && (
+                            <span style={{ color: "#909090" }}>
+                              {parts[0]}:
                             </span>
-                          );
-                        } else {
-                          return (
-                            <span key={index}>
-                              {str}
-                              <br />
-                            </span>
-                          );
-                        }
-                      })}
+                          )}
+                          {parts[1]}
+                          <br />
+                        </span>
+                      );
+                    })}
                   </p>
-
                   <Button
                     type="link"
                     icon={<LinkOutlined />}

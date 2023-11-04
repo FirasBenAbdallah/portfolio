@@ -44,6 +44,10 @@ export const projects = [
       french:
         "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
     },
+    tools: {
+      english: "",
+      french: "",
+    },
   },
   {
     id: 2,
@@ -58,6 +62,10 @@ export const projects = [
         "Technical Environments : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nManagement Tool : GitLab, Postman\nIDE : Visual Studio Code",
       french:
         "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
+    },
+    tools: {
+      english: "",
+      french: "",
     },
   },
   {
@@ -74,6 +82,10 @@ export const projects = [
       french:
         "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
     },
+    tools: {
+      english: "",
+      french: "",
+    },
   },
   {
     id: 4,
@@ -84,10 +96,14 @@ export const projects = [
     },
     date: "| 2022",
     description: {
+      english: "",
+      french: "",
+    },
+    tools: {
       english:
-        "\nTechnical Environments : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) and MongoDB.\nManagement Tool : Git, Postman\nIDE : Android Studio",
+        "Technical Environments : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) and MongoDB.\nManagement Tool : Git, Postman\nIDE : Android Studio",
       french:
-        "\nEnvironnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.\nOutil de gestion : Git, Postman\nIDE : Android Studio",
+        "Environnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.\nOutil de gestion : Git, Postman\nIDE : Android Studio",
     },
     link: "https://github.com/FirasBenAbdallah/Social_Goal_Sharing.git",
   },
@@ -100,10 +116,13 @@ export const projects = [
     },
     date: "| 2021",
     description: {
-      english:
-        "Development of a desktop application called 'Smart ESPRIT'\nTechnical Environments : C, Glade, Linux, Git",
+      english: "Development of a desktop application called 'Smart ESPRIT'",
       french:
-        "Développement d'une application de bureau appelée 'Smart ESPRIT'\nEnvironnements techniques : C, Glade, Linux, Git",
+        "Développement d'une application de bureau appelée 'Smart ESPRIT'",
+    },
+    tools: {
+      english: "Technical Environments : C, Glade, Linux, Git",
+      french: "Environnements techniques : C, Glade, Linux, Git",
     },
     link: "https://github.com/FirasBenAbdallah/SmartEsprit.git",
   },
