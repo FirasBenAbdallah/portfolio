@@ -101,7 +101,7 @@ const BodyComp = ({ language }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    En savoir plus
+                    {language === "french" ? "En savoir plus" : "Learn more"}
                   </Button>
                 </div>
               </article>

@@ -96,8 +96,10 @@ export const projects = [
     },
     date: "| 2022",
     description: {
-      english: "",
-      french: "",
+      english:
+        "Social Goal-Sharing App : A social goal-sharing app where users with similar challenges and  short-term goals like quitting smoking, working out regularly, dieting,  etc., come together to support each other with the right motivation  and words. A social media app where you can post a short-term goal and find  people to join the journey to completing it with you, or you can join a ready-made one. So it's basically like Instagram and Facebook, except instead of  followers or friends you have goals/challenges created and joined",
+      french:
+        "Application de partage d'objectifs sociaux : Une application de partage d'objectifs sociaux où les utilisateurs ayant des défis et objectifs à court terme similaires, comme arrêter de fumer, faire régulièrement de l'exercice, suivre un régime, etc., se rassemblent pour se soutenir mutuellement avec la motivation et les encouragements appropriés. Une application de médias sociaux où vous pouvez publier un objectif à court terme et trouver des personnes pour vous accompagner dans l'accomplissement de celui-ci, ou vous pouvez rejoindre un objectif déjà établi. C'est donc en quelque sorte comme Instagram et Facebook, sauf qu'au lieu de suiveurs ou d'amis, vous créez et rejoignez des objectifs/défis.",
     },
     tools: {
       english:
@@ -116,9 +118,10 @@ export const projects = [
     },
     date: "| 2021",
     description: {
-      english: "Development of a desktop application called 'Smart ESPRIT'",
+      english:
+        "'SmartEsprit' is a modern desktop application for Ubuntu designed to simplify tasks and enhance user experience. Developed primarily in the C language, the application utilizes the power of Glade-2.12.2 to present a user-friendly graphical interface.",
       french:
-        "Développement d'une application de bureau appelée 'Smart ESPRIT'",
+        "'SmartEsprit' est une application de bureau moderne pour Ubuntu conçue pour simplifier les tâches et améliorer l'expérience utilisateur Développée principalement en langage C, l'application utilise la puissance de Glade-2.12.2 pour présenter une interface graphique conviviale.",
     },
     tools: {
       english: "Technical Environments : C, Glade, Linux, Git",
