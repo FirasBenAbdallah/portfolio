@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Button } from "antd";
-import { translationsH } from "../data/translation";
+import { header } from "../data/translation";
 import profile from "../assets/images/FBA.png";
 import qrcode from "../assets/images/QrCode.png";
 import {
@@ -21,10 +21,10 @@ const HeaderComp = ({ language }) => {
   return (
     <header>
       <div className="left">
-        <img src={profile} alt="firas img" className="firas-pic"/>
+        <img src={profile} alt="firas img" className="firas-pic" />
         <div className="user-infos">
           <h1>Firas Ben Abdallah</h1>
-          <h3>{translationsH.subtitle[language]}</h3>
+          <h3>{header.subtitle[language]}</h3>
           <div className="contacts">
             {/* Linkedin */}
             <div className="contact-item">
@@ -83,7 +83,7 @@ const HeaderComp = ({ language }) => {
           icon={<MessageOutlined />}
           onClick={() => setModalIsOpen(true)}
         >
-          {translationsH.contactMe[language]}
+          {header.contactMe[language]}
         </Button>
         <Modal
           isOpen={modalIsOpen}
@@ -114,7 +114,7 @@ const HeaderComp = ({ language }) => {
               marginBottom: "15px",
             }}
           >
-            {translationsH.contactDetails[language]}
+            {header.contactDetails[language]}
           </h2>
           <img src={qrcode} alt="QrCode" />
         </Modal>

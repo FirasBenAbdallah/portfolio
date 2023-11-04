@@ -1,4 +1,5 @@
-export const translationsH = {
+// Data: Translate Header
+export const header = {
   subtitle: {
     english: "Software Engineering",
     french: "ingénieur en informatique",
@@ -13,14 +14,23 @@ export const translationsH = {
   },
 };
 
-export const translationA = {
+// Data: Translate Aside
+export const aside = {
   // Location_localisation
   location: {
     english: "Ariana, Tunisia",
     french: "Ariana, Tunisie",
   },
-  // Skills_compétences
-  title1: {
+  // Education_éducation
+  title: {
+    english: "Education",
+    french: "Éducation",
+  },
+};
+
+// Aside: Translate Skills
+export const skills = {
+  title: {
     english: "Skills",
     french: "Compétences",
   },
@@ -40,13 +50,15 @@ export const translationA = {
     english: "• Database design and management:",
     french: "• Conception et gestion de bases de données :",
   },
-  link1: {
+  link: {
     english: "Learn more on Github",
     french: "En savoir plus sur Github",
   },
+};
 
-  // Testimonials_témoignages
-  title2: {
+// Aside: Translate Testimonial
+export const testimonial = {
+  title: {
     english: "Testimonials",
     french: "Témoignages",
   },
@@ -56,44 +68,13 @@ export const translationA = {
     french:
       "Firas Ben Abdallah se distingue par son expertise approfondie en tant qu'ingénieur informatique. Sa rigueur professionnelle et son dévouement au métier garantissent la réussite de chaque projet qu'il entreprend. Le confier une mission, c'est assurer sa réalisation à la perfection.",
   },
-  link2: {
+  link: {
     english: "Learn more on LinkedIn",
     french: "En savoir plus sur LinkedIn",
   },
-
-  // Education_éducation
-  title3: {
-    english: "Education",
-    french: "Éducation",
-  },
-
-  // Languages_langues
-  title4: {
-    english: "Languages",
-    french: "Langues",
-  },
-  language1: {
-    english: "Arabic",
-    french: "Arabe",
-  },
-  language2: {
-    english: "French",
-    french: "Français",
-  },
-  language3: {
-    english: "English",
-    french: "Anglais",
-  },
-  type1: {
-    english: "Native speaker",
-    french: "Locuteur natif",
-  },
-  type2: {
-    english: "Professional skills",
-    french: "Competances professionnelles",
-  },
 };
 
+// Aside: Translate Education
 export const education = [
   {
     title: {
@@ -140,3 +121,45 @@ export const education = [
     date: "| 2009-2010",
   },
 ];
+
+//Aside: Translate Languages
+export const languages = {
+  title: {
+    english: "Languages",
+    french: "Langues",
+  },
+  language1: {
+    english: "Arabic",
+    french: "Arabe",
+  },
+  language2: {
+    english: "French",
+    french: "Français",
+  },
+  language3: {
+    english: "English",
+    french: "Anglais",
+  },
+  type1: {
+    english: "Native speaker",
+    french: "Locuteur natif",
+  },
+  type2: {
+    english: "Professional skills",
+    french: "Competances professionnelles",
+  },
+};
+
+// Body: Translate About Me
+export const aboutMe = {
+  title: {
+    english: "About Me",
+    french: "À propos de moi",
+  },
+  description: {
+    english:
+      "In my third year of computer engineering at the Private Higher School of Engineering and Technology (ESPRIT), I distinguished myself in the fields of web and mobile development, testing, and DevOps practices. With a solid academic background combined with a passion for quality assurance and continuous integration, I am currently looking for a final year internship (PFE). My goal is to implement these skills and make a significant contribution to innovative initiatives, while optimizing development and deployment processes.",
+    french:
+      "En ma troisième année d'ingénierie en informatique à l'École Supérieure Privée d'Ingénieurs et de Technologie (ESPRIT), je me suis distingué dans les domaines du développement web et mobile, du testing et des pratiques DevOps. Avec une solide formation académique associée à une passion pour l'assurance qualité et l'intégration continue, je suis actuellement à la recherche d'un stage PFE. Mon objectif est de mettre en œuvre ces compétences et de contribuer de manière significative à des initiatives innovantes, tout en optimisant les processus de développement et de déploiement.",
+  },
+};

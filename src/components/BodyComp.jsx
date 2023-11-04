@@ -1,6 +1,7 @@
 import { Button, Divider } from "antd";
 import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
 import { experience, projects } from "../data/data";
+import { aboutMe } from "../data/translation";
 import AsideComp from "./AsideComp";
 
 const BodyComp = ({ language }) => {
@@ -9,19 +10,8 @@ const BodyComp = ({ language }) => {
       <div className="left">
         <section className="about">
           <article>
-            <h2>A propos de moi</h2>
-            <p>
-              En ma troisième année d'ingénierie en informatique à l'École
-              Supérieure Privée d'Ingénieurs et de Technologie (ESPRIT), je me
-              suis distingué dans les domaines du développement web et mobile,
-              du testing et des pratiques DevOps. Avec une solide formation
-              académique associée à une passion pour l'assurance qualité et
-              l'intégration continue, je suis actuellement à la recherche d'un
-              stage PFE. Mon objectif est de mettre en œuvre ces compétences et
-              de contribuer de manière significative à des initiatives
-              innovantes, tout en optimisant les processus de développement et
-              de déploiement.
-            </p>
+            <h2>{aboutMe.title[language]}</h2>
+            <p>{aboutMe.description[language]}</p>
           </article>
         </section>
         <section className="projects">

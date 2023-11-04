@@ -1,5 +1,5 @@
 import React from "react";
-import palestine from "../assets/images/palestine.png";
+// import palestine from "../assets/images/palestine.png";
 import fba from "../assets/images/signature_FBA_Black.png";
 
 const SplashScreen = () => {

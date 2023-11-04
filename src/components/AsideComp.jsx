@@ -4,7 +4,13 @@ import {
   MailOutlined,
 } from "@ant-design/icons";
 import { Button } from "antd";
-import { translationA, education } from "../data/translation";
+import {
+  aside,
+  skills,
+  testimonial,
+  languages,
+  education,
+} from "../data/translation";
 
 const AsideComp = ({ language }) => {
   return (
@@ -13,7 +19,7 @@ const AsideComp = ({ language }) => {
         <div className="section contacts">
           <div className="contact-item">
             <EnvironmentOutlined />
-            <span>{translationA.location[language]}</span>
+            <span>{aside.location[language]}</span>
           </div>
           <div className="contact-item">
             <MailOutlined />
@@ -35,11 +41,11 @@ const AsideComp = ({ language }) => {
           </div>
         </div>
         <div className="section">
-          <h2>{translationA.title1[language]}</h2>
+          <h2>{skills.title[language]}</h2>
           <br />
           <p>
             <div class="inline-container">
-              <strong>{translationA.theme1[language]}</strong>
+              <strong>{skills.theme1[language]}</strong>
               <hr />
             </div>
             <br />
@@ -47,7 +53,7 @@ const AsideComp = ({ language }) => {
             <br />
             <br />
             <div class="inline-container">
-              <strong>{translationA.theme2[language]}</strong>
+              <strong>{skills.theme2[language]}</strong>
               <hr />
             </div>
             <br />
@@ -56,7 +62,7 @@ const AsideComp = ({ language }) => {
             <br />
             <br />
             <div class="inline-container">
-              <strong>{translationA.theme3[language]}</strong>
+              <strong>{skills.theme3[language]}</strong>
               <hr />
             </div>
             <br />
@@ -65,7 +71,7 @@ const AsideComp = ({ language }) => {
             <br />
             <br />
             <div class="inline-container">
-              <strong>{translationA.theme4[language]}</strong>
+              <strong>{skills.theme4[language]}</strong>
               <hr />
             </div>
             <br />
@@ -78,18 +84,18 @@ const AsideComp = ({ language }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {translationA.link1[language]}
+            {skills.link[language]}
           </Button>
         </div>
         <div className="section">
-          <h2>{translationA.title2[language]}</h2>
-          <p>{translationA.description[language]}</p>
+          <h2>{testimonial.title[language]}</h2>
+          <p>{testimonial.description[language]}</p>
           <Button type="link" icon={<LinkOutlined />}>
-            {translationA.link2[language]}
+            {testimonial.link[language]}
           </Button>
         </div>
         <div className="section">
-          <h2>{translationA.title3[language]}</h2>
+          <h2>{aside.title[language]}</h2>
           {education.map((item, index) => {
             return (
               <div className="education-item" key={index}>
@@ -103,24 +109,24 @@ const AsideComp = ({ language }) => {
           })}
         </div>
         <div className="section">
-          <h2>{translationA.title4[language]}</h2>
+          <h2>{languages.title[language]}</h2>
           <div className="language-item">
-            <h3>{translationA.language1[language]}</h3>
-            <span>{translationA.type1[language]}</span>
+            <h3>{languages.language1[language]}</h3>
+            <span>{languages.type1[language]}</span>
             <div className="full">
               <div className="percent first"></div>
             </div>
           </div>
           <div className="language-item">
-            <h3>{translationA.language2[language]}</h3>
-            <span>{translationA.type2[language]}</span>
+            <h3>{languages.language2[language]}</h3>
+            <span>{languages.type2[language]}</span>
             <div className="full">
               <div className="percent second"></div>
             </div>
           </div>
           <div className="language-item">
-            <h3>{translationA.language3[language]}</h3>
-            <span>{translationA.type2[language]}</span>
+            <h3>{languages.language3[language]}</h3>
+            <span>{languages.type2[language]}</span>
             <div className="full">
               <div className="percent third"></div>
             </div>
