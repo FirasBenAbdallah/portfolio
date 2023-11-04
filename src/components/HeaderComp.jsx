@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import { Button } from "antd";
-import { header } from "../data/translation";
+import { header } from "../data/headerFooter";
 import profile from "../assets/images/FBA.png";
 import qrcode from "../assets/images/QrCode.png";
 import {

@@ -1,7 +1,6 @@
 import { Button, Divider } from "antd";
 import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
-import { projects } from "../data/data";
-import { body, aboutMe, experience } from "../data/translation";
+import { body, aboutMe, projects, experience } from "../data/body";
 import AsideComp from "./AsideComp";
 
 const BodyComp = ({ language }) => {

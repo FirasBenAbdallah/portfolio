@@ -1,12 +1,10 @@
-import { footer } from "../data/translation";
+import { footer } from "../data/headerFooter";
 
-const FooterComp = ({language}) => {
+const FooterComp = ({ language }) => {
   return (
     <>
       <footer>
-        <p>
-          {footer.description[language]}
-        </p>
+        <p>{footer.description[language]}</p>
       </footer>
     </>
   );

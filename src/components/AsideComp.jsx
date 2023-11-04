@@ -10,7 +10,7 @@ import {
   testimonial,
   languages,
   education,
-} from "../data/translation";
+} from "../data/aside";
 
 const AsideComp = ({ language }) => {
   return (
