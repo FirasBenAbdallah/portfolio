@@ -1,7 +1,7 @@
 import { Button, Divider } from "antd";
 import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
-import { experience, projects } from "../data/data";
-import { aboutMe } from "../data/translation";
+import { projects } from "../data/data";
+import { body, aboutMe, experience } from "../data/translation";
 import AsideComp from "./AsideComp";
 
 const BodyComp = ({ language }) => {
@@ -112,31 +112,33 @@ const BodyComp = ({ language }) => {
         </section>
 
         <section className="experiences">
-          <h2>Experience professionnelle</h2>
+          <h2>{body.title[language]}</h2>
           {experience.map((item) => {
             return (
               <article key={item.id}>
                 <div className="experience-info">
                   <h3>
-                    {item.title}
+                    {item.title[language]}
                     <hr />
                   </h3>
-                  <span>{item.date}</span>
+                  <span>{item.date[language]}</span>
                 </div>
                 <p>
-                  {item.description.split("\n").map((str, index, array) =>
-                    index === array.length - 1 ? (
-                      str
-                    ) : (
-                      <>
-                        {str}
-                        <br />
-                        <span style={{ color: "#909090" }}>
-                          Environnements techniques :
-                        </span>
-                      </>
-                    )
-                  )}
+                  {item.description[language]
+                    .split("\n")
+                    .map((str, index, array) =>
+                      index === array.length - 1 ? (
+                        str
+                      ) : (
+                        <>
+                          {str}
+                          <br />
+                          <span style={{ color: "#909090" }}>
+                            {body.environment[language]}
+                          </span>
+                        </>
+                      )
+                    )}
                 </p>
               </article>
             );

@@ -1,10 +1,11 @@
-const FooterComp = () => {
+import { footer } from "../data/translation";
+
+const FooterComp = ({language}) => {
   return (
     <>
       <footer>
         <p>
-          Concu avec la librairie React JS, par Firas Ben Abdallah, All Right
-          Reserved &copy; 2023
+          {footer.description[language]}
         </p>
       </footer>
     </>
