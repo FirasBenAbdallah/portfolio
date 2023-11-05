@@ -297,49 +297,6 @@ footer {
   justify-content: center;
 }
 
-/* Les media queries */
-@media (max-width: 610px) {
-  .main header {
-    flex-direction: column;
-    padding: 25px 0;
-    height: 400px;
-  }
-  .main header .left {
-    flex-direction: column;
-    text-align: center;
-    text-align: center;
-  }
-}
-
-@media (max-width: 1000px) {
-  .main .body-container {
-    flex-direction: column;
-    padding: 50px 30px;
-  }
-
-  .main .body-container .left {
-    width: 100%;
-  }
-
-  aside {
-    width: 100%;
-  }
-}
-
-@media (max-width: 740px) {
-  .main .body-container .left section.projects article.article-item {
-    flex-direction: column;
-  }
-
-  .main .body-container .left section.projects article.article-item .left {
-    width: 100%;
-  }
-
-  .main .body-container .left section.projects article.article-item .right {
-    width: 100%;
-  }
-}
-
 /* Splash Screen */
 .welcome-container {
   position: relative;
@@ -364,7 +321,6 @@ footer {
 }
 
 .welcome-title {
-  /* font-family: "Raleway", sans-serif; */
   font-family: cursive;
   font-size: 3.5rem;
   color: #333;
@@ -390,6 +346,7 @@ footer {
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
+  max-width: 100%;
 }
 
 .fba-img:hover {
@@ -421,4 +378,73 @@ footer {
   border-radius: 5px;
   cursor: pointer;
   font-family: cursive;
+}
+
+/* Les media queries */
+
+/* Media query for mobile devices */
+@media (max-width: 610px) {
+  .main header {
+    flex-direction: column;
+    padding: 25px 0;
+    height: 400px;
+  }
+  .main header .left {
+    flex-direction: column;
+    text-align: center;
+    text-align: center;
+  }
+}
+
+/* Media query for desktops */
+@media (max-width: 1000px) {
+  .main .body-container {
+    flex-direction: column;
+    padding: 50px 30px;
+  }
+
+  .main .body-container .left {
+    width: 100%;
+  }
+
+  aside {
+    width: 100%;
+  }
+}
+
+/* Media query for laptops */
+@media (max-width: 740px) {
+  .main .body-container .left section.projects article.article-item {
+    flex-direction: column;
+  }
+
+  .main .body-container .left section.projects article.article-item .left {
+    width: 100%;
+  }
+
+  .main .body-container .left section.projects article.article-item .right {
+    width: 100%;
+  }
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+  .fba-img {
+    border-radius: 15px;
+    max-width: 90%;
+  }
+  .welcome-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+  .fba-img {
+    border-radius: 10px;
+    max-width: 70%;
+  }
+  .welcome-title {
+    font-size: 1.75rem;
+  }
 }
