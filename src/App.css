@@ -284,6 +284,9 @@ footer {
   .welcome-title {
     font-size: 2.5rem;
   }
+  .horizontal-line {
+    padding: 0px 15px;
+  }
 }
 
 /* Media query for mobile devices */
@@ -294,5 +297,23 @@ footer {
   }
   .welcome-title {
     font-size: 1.75rem;
+  }
+  .horizontal-line {
+    padding: 0px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 410px) {
+  .horizontal-line {
+    flex-direction: column;
+  }
+  .horizontal-line .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .horizontal-line .buttons .language-btn {
+    padding: 5px 5px;
   }
 }

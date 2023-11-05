@@ -2,12 +2,11 @@ import { useState } from "react";
 import "./App.css";
 import "./styles/Theme.css";
 import "./styles/Header.css";
-import "./styles/ToggleSwitch.css";
 import SplashScreen from "./components/SplashScreen";
 import HeaderComp from "./components/HeaderComp";
 import BodyComp from "./components/BodyComp";
 import FooterComp from "./components/FooterComp";
-import ThemeSwitch from "./components/Switch";
+import ThemeSwitch from "./components/ThemeSwitch";
 
 function App() {
   const [language, setLanguage] = useState("english"); // state to control language
@@ -32,7 +31,7 @@ function App() {
         <div className={`main ${themeClass}`}>
           <div className="horizontal-line">
             <h1>FBA Portfolio</h1>
-            <div>
+            <div className="buttons">
               <button
                 className="language-btn"
                 onClick={() =>
@@ -63,22 +62,6 @@ function App() {
                   </>
                 )}
               </button>
-              {/* Toggle Theme Button */}
-              {/* <button onClick={toggleTheme}>
-                {theme === "dark"
-                  ? "Switch to Light Mode"
-                  : "Switch to Dark Mode"}
-              </button> */}
-              {/* Toggle Theme Switch */}
-              {/* <label className="toggle-switch">
-                <input
-                  type="checkbox"
-                  checked={theme === "dark"}
-                  onChange={toggleTheme}
-                />
-                <span className="switch" />
-              </label> */}
-              {/* Toggle Theme Switch using ThemeSwitch Component */}
               <ThemeSwitch checked={theme === "dark"} onChange={toggleTheme} />
             </div>
           </div>

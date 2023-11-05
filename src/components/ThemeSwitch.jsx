@@ -1,10 +1,5 @@
-// Switch.jsx
-// import React from "react";
 import Switch from "@mui/material/Switch";
 import { styled } from "@mui/material/styles";
-/* import { ThemeProvider, createTheme } from "@mui/material/styles";
-import WbSunnyOutlinedIcon from "@mui/icons-material/WbSunnyOutlined";
-import NightsStayOutlinedIcon from "@mui/icons-material/NightsStayOutlined"; */
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
