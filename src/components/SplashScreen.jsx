@@ -1,8 +1,15 @@
-import React from "react";
-// import palestine from "../assets/images/palestine.png";
+import { useEffect } from "react";
 import fba from "../assets/images/signature_FBA_Black.png";
 
-const SplashScreen = () => {
+const SplashScreen = ({ onEnterSite }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      onEnterSite();
+    }, 4000);
+
+    return () => clearTimeout(timer);
+  }, [onEnterSite]);
+  
   return (
     <>
       <div className="welcome-container">

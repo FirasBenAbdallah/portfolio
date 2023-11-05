@@ -12,10 +12,12 @@ import {
   education,
 } from "../data/aside";
 
-const AsideComp = ({ language }) => {
+const AsideComp = ({ language, theme }) => {
+  const themeClass = theme === "dark" ? "aside-dark" : "aside-light";
+
   return (
     <>
-      <aside>
+      <aside className={themeClass}>
         <div className="section contacts">
           <div className="contact-item">
             <EnvironmentOutlined />

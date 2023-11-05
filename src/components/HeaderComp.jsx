@@ -15,11 +15,12 @@ import {
 
 Modal.setAppElement("#root");
 
-const HeaderComp = ({ language }) => {
+const HeaderComp = ({ language, theme }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const themeClass = theme === "dark" ? "header-dark" : "header-light";
 
   return (
-    <header>
+    <header className={themeClass}>
       <div className="left">
         <img src={profile} alt="firas img" className="firas-pic" />
         <div className="user-infos">
@@ -60,7 +61,7 @@ const HeaderComp = ({ language }) => {
             </div>
 
             <div className="contact-item">
-              <TwitterOutlined />
+              <TwitterOutlined style={{ color: "white" }} />
             </div>
 
             {/* Facebook */}

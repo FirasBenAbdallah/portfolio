@@ -1,0 +1,81 @@
+/* body aside */
+aside {
+  width: 30%;
+  margin-right: 10px;
+}
+
+aside .section {
+  width: 100%;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+aside .contacts .contact-item {
+  margin: 15px 0;
+}
+
+aside .contacts .contact-item span {
+  margin-left: 10px;
+}
+
+aside .section p {
+  margin: 10px 0;
+}
+
+aside .section .education-item {
+  margin: 10px 0;
+}
+
+.education-item-nd {
+  display: flex;
+  align-items: center; /* Aligns items vertically centered, if you want them top-aligned, remove this */
+}
+
+.education-item-nd > span:last-child {
+  margin-left: auto;
+}
+
+aside .section .education-item span {
+  font-size: 13px;
+}
+
+aside .section .language-item {
+  margin: 15px 0;
+}
+
+aside .section .language-item .full {
+  width: 100%;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+aside .section .language-item .percent {
+  background-color: #0d6e3e;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+aside .section .language-item .first {
+  width: 99%;
+}
+
+aside .section .language-item .second {
+  width: 85%;
+}
+
+aside .section .language-item .third {
+  width: 70%;
+}
+
+@media (max-width: 1000px) {
+  aside {
+    width: 100%;
+  }
+  aside .section {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,78 @@
+/* Main light theme styles */
+.light-mode {
+  background-color: #f9f9f9; /* Light background */
+  color: #333333; /* Darker text suitable for light background */
+}
+
+/* FBA Portfolio Theme */
+.light-mode .horizontal-line h1 {
+  color: #333;
+}
+
+/* Header */
+/* Dark theme styles */
+.header-dark {
+  background-color: #282828;
+  color: #fff;
+}
+
+/* Light theme styles */
+.header-light {
+  background-color: #d7d7d7;
+  color: #333;
+}
+
+/* Aside */
+/* Dark theme styles */
+.aside-dark {
+  color: #fff;
+}
+
+.aside-dark .section {
+  background-color: #282828;
+  color: #fff;
+}
+
+.aside-dark .contacts .contact-item span a {
+  color: #fff;
+}
+
+/* Light theme styles */
+.aside-light {
+  color: #222;
+}
+
+.aside-light .section {
+  background-color: #d7d7d7;
+  color: #333;
+}
+
+.aside-light .contacts .contact-item span a {
+  color: #333;
+}
+
+/* Body */
+/* Dark theme styles */
+.body-dark .left section {
+  background-color: #282828;
+  color: #fff;
+}
+
+/* Light theme styles */
+.body-light .left section {
+  background-color: #d7d7d7;
+  color: #222;
+}
+
+/* Footer */
+/* Dark theme styles */
+.footer-dark {
+  background-color: #282828;
+  color: #fff;
+}
+
+/* Light theme styles */
+.footer-light {
+  background-color: #d7d7d7;
+  color: #222;
+}

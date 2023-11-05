@@ -1,26 +1,35 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./App.css";
+import "./styles/Theme.css";
+import "./styles/Header.css";
+import "./styles/ToggleSwitch.css";
 import SplashScreen from "./components/SplashScreen";
 import HeaderComp from "./components/HeaderComp";
 import BodyComp from "./components/BodyComp";
 import FooterComp from "./components/FooterComp";
+import ThemeSwitch from "./components/Switch";
 
 function App() {
   const [language, setLanguage] = useState("english"); // state to control language
   const [isEntered, setIsEntered] = useState(false);
+  const [theme, setTheme] = useState("dark");
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsEntered(true);
-    }, 3000);
+  // Function to toggle theme
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
-    return () => clearTimeout(timer);
-  }, []);
+  // Add a class to your main div based on the theme state
+  const themeClass = theme === "dark" ? "" : "light-mode";
+
+  const handleEnterSite = () => {
+    setIsEntered(true);
+  };
 
   return (
     <>
       {isEntered ? (
-        <div className="main">
+        <div className={`main ${themeClass}`}>
           <div className="horizontal-line">
             <h1>FBA Portfolio</h1>
             <div>
@@ -54,16 +63,33 @@ function App() {
                   </>
                 )}
               </button>
+              {/* Toggle Theme Button */}
+              {/* <button onClick={toggleTheme}>
+                {theme === "dark"
+                  ? "Switch to Light Mode"
+                  : "Switch to Dark Mode"}
+              </button> */}
+              {/* Toggle Theme Switch */}
+              {/* <label className="toggle-switch">
+                <input
+                  type="checkbox"
+                  checked={theme === "dark"}
+                  onChange={toggleTheme}
+                />
+                <span className="switch" />
+              </label> */}
+              {/* Toggle Theme Switch using ThemeSwitch Component */}
+              <ThemeSwitch checked={theme === "dark"} onChange={toggleTheme} />
             </div>
           </div>
           <div className={language}>
-            <HeaderComp language={language} />
-            <BodyComp language={language} />
-            <FooterComp language={language} />
+            <HeaderComp language={language} theme={theme} />
+            <BodyComp language={language} theme={theme} />
+            <FooterComp language={language} theme={theme} />
           </div>
         </div>
       ) : (
-        <SplashScreen />
+        <SplashScreen onEnterSite={handleEnterSite} />
       )}
     </>
   );

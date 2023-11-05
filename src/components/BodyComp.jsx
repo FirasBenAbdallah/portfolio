@@ -2,10 +2,13 @@ import { Button, Divider } from "antd";
 import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
 import { body, aboutMe, projects, experience } from "../data/body";
 import AsideComp from "./AsideComp";
+import "../styles/Aside.css";
 
-const BodyComp = ({ language }) => {
+const BodyComp = ({ language, theme }) => {
+  const themeClass = theme === "dark" ? "body-dark" : "body-light";
+
   return (
-    <div className="body-container">
+    <div className={`body-container ${themeClass}`}>
       <div className="left">
         <section className="about">
           <article>
@@ -143,7 +146,7 @@ const BodyComp = ({ language }) => {
           })}
         </section>
       </div>
-      <AsideComp language={language} />
+      <AsideComp language={language} theme={theme} />
     </div>
   );
 };

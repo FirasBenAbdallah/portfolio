@@ -1,9 +1,11 @@
 import { footer } from "../data/headerFooter";
 
-const FooterComp = ({ language }) => {
+const FooterComp = ({ language, theme }) => {
+  const themeClass = theme === "dark" ? "footer-dark" : "footer-light";
+  
   return (
     <>
-      <footer>
+      <footer className={themeClass}>
         <p>{footer.description[language]}</p>
       </footer>
     </>
