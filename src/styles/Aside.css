@@ -79,3 +79,9 @@ aside .section .language-item .third {
     margin-left: 0;
   }
 }
+
+@media (max-width: 480px) {
+  aside .section {
+    font-size: 85%;
+  }
+}

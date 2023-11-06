@@ -317,7 +317,11 @@ footer {
   .horizontal-line .buttons .language-btn {
     padding: 5px 5px;
   }
-  .footer {
-    font-size: 10px;
+  footer {
+    font-size: 75%;
+  }
+
+  .body-container .left {
+    font-size: 80%;
   }
 }
