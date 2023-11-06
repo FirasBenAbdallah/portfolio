@@ -312,8 +312,12 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    margin-top: 10px;
   }
   .horizontal-line .buttons .language-btn {
     padding: 5px 5px;
+  }
+  .footer {
+    font-size: 10px;
   }
 }
