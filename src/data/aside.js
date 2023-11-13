@@ -34,6 +34,18 @@ export const skills = {
     english: "• Database design and management:",
     french: "• Conception et gestion de bases de données :",
   },
+  theme5: {
+    english: "• DevOps:",
+    french: "• DevOps :",
+  },
+  theme6: {
+    english: "• Unit Testing:",
+    french: "• Test Unitaire :",
+  },
+  theme7: {
+    english: "• AI:",
+    french: "• IA :",
+  },
   link: {
     english: "Learn more on Github",
     french: "En savoir plus sur Github",

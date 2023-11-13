@@ -42,6 +42,7 @@ const AsideComp = ({ language, theme }) => {
             </span>
           </div>
         </div>
+        {/* Skills/Compétences */}
         <div className="section">
           <h2>{skills.title[language]}</h2>
           <br />
@@ -51,7 +52,7 @@ const AsideComp = ({ language, theme }) => {
               <hr />
             </div>
             <br />
-            Java, C#, Python, C, C++
+            Java, C#, JavaScript, Python, C, C++
             <br />
             <br />
             <div class="inline-container">
@@ -59,8 +60,8 @@ const AsideComp = ({ language, theme }) => {
               <hr />
             </div>
             <br />
-            Angular, ReactJS, Express NodeJS, Spring Boot, .Net core, Symfony,
-            jQuery, JavaScript, Bootstrap5, HTML5, CSS3, JEE.
+            Angular, ReactJS, Express.JS/NodeJS, Spring Boot, Symfony, ASP.Net
+            core. jQuery, HTML5, CSS3, Bootstrap5, JEE.
             <br />
             <br />
             <div class="inline-container">
@@ -68,8 +69,8 @@ const AsideComp = ({ language, theme }) => {
               <hr />
             </div>
             <br />
-            Flutter, Android (Kotlin,XML,Jetpack Compose),
-            iOS(SwiftUI,Storyboard)
+            Flutter, Android (Kotlin/XML/Jetpack Compose), iOS
+            (SwiftUI/Storyboard)
             <br />
             <br />
             <div class="inline-container">
@@ -78,6 +79,30 @@ const AsideComp = ({ language, theme }) => {
             </div>
             <br />
             MongoDB, Oracle SQL, MySQL, Firebase
+            <br />
+            <br />
+            <div class="inline-container">
+              <strong>{skills.theme5[language]}</strong>
+              <hr />
+            </div>
+            <br />
+            Jenkins, Docker, Nexus, Grafana/Prometheus, Vagrant
+            <br />
+            <br />
+            <div class="inline-container">
+              <strong>{skills.theme6[language]}</strong>
+              <hr />
+            </div>
+            <br />
+            JUNIT, SonarQube
+            <br />
+            <br />
+            <div class="inline-container">
+              <strong>{skills.theme7[language]}</strong>
+              <hr />
+            </div>
+            <br />
+            Computer-Vision, ML/DL
           </p>
           <Button
             type="link"
@@ -89,6 +114,7 @@ const AsideComp = ({ language, theme }) => {
             {skills.link[language]}
           </Button>
         </div>
+        {/* Testimonials/Témoignages */}
         <div className="section">
           <h2>{testimonial.title[language]}</h2>
           <p>{testimonial.description[language]}</p>
@@ -96,6 +122,7 @@ const AsideComp = ({ language, theme }) => {
             {testimonial.link[language]}
           </Button>
         </div>
+        {/* Languages/Langues */}
         <div className="section">
           <h2>{aside.title[language]}</h2>
           {education.map((item, index) => {

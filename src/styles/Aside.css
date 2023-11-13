@@ -60,7 +60,9 @@ aside .section .language-item .percent {
 }
 
 aside .section .language-item .first {
-  width: 99%;
+  width: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 aside .section .language-item .second {

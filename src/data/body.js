@@ -70,26 +70,44 @@ export const projects = [
   },
   {
     id: 3,
-    image:
-      "https://kinsta.com/fr/wp-content/themes/kinsta/images/custom-pages/page/landing-best-wordpress-themes/screenshots/oceanwp.jpg",
+    image: "https://i.imgur.com/YtKFJTe.png?4",
+    imgLink: "https://i.imgur.com/YtKFJTe.png?4",
     title: {
-      english: "Development of an e-commerce web application",
-      french: "Developpement d'une application web-ecommerce",
+      english: "Web and Mobile Application « Education-ADO »",
+      french: "Application web et mobile « Education-ADO »",
     },
     description: {
-      english:
-        "Technical Environments : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nManagement Tool : GitLab, Postman\nIDE : Visual Studio Code",
-      french:
-        "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
+      english: `
+      The educational platform described offers two specific interfaces:
+
+      -Teacher Mode: Allows teachers to create and manage course content, track student progress, assign and correct work, and communicate with students.
+        
+      -Student Mode: Provides students with access to course materials, a space to submit work, a personal online storage space, and the ability to tak exams, including coding tests through an integrated compiler.
+        
+      The platform serves as an interactive and collaborative learning system with tools tailored to the needs of modern teaching and learning.`,
+      french: `
+      La plateforme éducative décrite offre deux interfaces spécifiques : 
+      
+      - Mode Enseignant : Permet aux enseignants de créer et gérer le contenu des cours, de suivre les progrès des étudiants, d'assigner et de corriger des travaux, et de communiquer avec les étudiants.
+        
+      - Mode Étudiant : Offre aux étudiants un accès aux matériaux de cours, un espace pour soumettre des travaux, un espace de stockage personnel en ligne et la capacité de passer des examens, notamment des tests de codage via un compilateur intégré.
+        
+        La plateforme sert de système d'apprentissage interactif et collaboratif avec des outils adaptés aux besoins de l'enseignement et de l'apprentissage modernes.`,
     },
     tools: {
-      english: "",
-      french: "",
+      english: `Key Words : Angular, ReactJS, Flutter, Express.JS (Node.JS) et MongoDB.
+      Management Tools : Git, Postman
+      IDE : Android Studio, VS Code`,
+      french: `Environnements techniques : Angular, ReactJS, Flutter, Express.JS(Node.JS) et MongoDB.
+      Outil de gestion : Git, Postman
+      IDE : Android Studio, VS Code`,
     },
+    link: "https://github.com/FirasBenAbdallah/PIM_SIM.git",
   },
   {
     id: 4,
     image: "https://i.imgur.com/GQbZvqN.jpg",
+    imgLink: "https://i.imgur.com/GQbZvqN.jpg",
     title: {
       english: "Android Application « Do it ! »",
       french: "Application Android « Do it ! »",
@@ -97,21 +115,24 @@ export const projects = [
     date: "| 2022",
     description: {
       english:
-        "Social Goal-Sharing App : A social goal-sharing app where users with similar challenges and  short-term goals like quitting smoking, working out regularly, dieting,  etc., come together to support each other with the right motivation  and words. A social media app where you can post a short-term goal and find  people to join the journey to completing it with you, or you can join a ready-made one. So it's basically like Instagram and Facebook, except instead of  followers or friends you have goals/challenges created and joined",
+        "\nSocial Goal-Sharing App : A social goal-sharing app where users with similar challenges and  short-term goals like quitting smoking, working out regularly, dieting,  etc., come together to support each other with the right motivation  and words. A social media app where you can post a short-term goal and find  people to join the journey to completing it with you, or you can join a ready-made one. So it's basically like Instagram and Facebook, except instead of  followers or friends you have goals/challenges created and joined",
       french:
-        "Application de partage d'objectifs sociaux : Une application de partage d'objectifs sociaux où les utilisateurs ayant des défis et objectifs à court terme similaires, comme arrêter de fumer, faire régulièrement de l'exercice, suivre un régime, etc., se rassemblent pour se soutenir mutuellement avec la motivation et les encouragements appropriés. Une application de médias sociaux où vous pouvez publier un objectif à court terme et trouver des personnes pour vous accompagner dans l'accomplissement de celui-ci, ou vous pouvez rejoindre un objectif déjà établi. C'est donc en quelque sorte comme Instagram et Facebook, sauf qu'au lieu de suiveurs ou d'amis, vous créez et rejoignez des objectifs/défis.",
+        "\nApplication de partage d'objectifs sociaux : Une application de partage d'objectifs sociaux où les utilisateurs ayant des défis et objectifs à court terme similaires, comme arrêter de fumer, faire régulièrement de l'exercice, suivre un régime, etc., se rassemblent pour se soutenir mutuellement avec la motivation et les encouragements appropriés. Une application de médias sociaux où vous pouvez publier un objectif à court terme et trouver des personnes pour vous accompagner dans l'accomplissement de celui-ci, ou vous pouvez rejoindre un objectif déjà établi. C'est donc en quelque sorte comme Instagram et Facebook, sauf qu'au lieu de suiveurs ou d'amis, vous créez et rejoignez des objectifs/défis.",
     },
     tools: {
-      english:
-        "Technical Environments : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) and MongoDB.\nManagement Tool : Git, Postman\nIDE : Android Studio",
-      french:
-        "Environnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.\nOutil de gestion : Git, Postman\nIDE : Android Studio",
+      english: `Key Words : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) and MongoDB.
+        Management Tools : Git, Postman
+        IDE : Android Studio`,
+      french: `Environnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.
+        Outil de gestion : Git, Postman
+        IDE : Android Studio`,
     },
     link: "https://github.com/FirasBenAbdallah/Social_Goal_Sharing.git",
   },
   {
     id: 5,
     image: "https://i.imgur.com/s6B6x8H.png",
+    imgLink: "https://i.imgur.com/s6B6x8H.png",
     title: {
       english: "Smart ESPRIT Application",
       french: "Application Smart ESPRIT",
@@ -119,12 +140,12 @@ export const projects = [
     date: "| 2021",
     description: {
       english:
-        "'SmartEsprit' is a modern desktop application for Ubuntu designed to simplify tasks and enhance user experience. Developed primarily in the C language, the application utilizes the power of Glade-2.12.2 to present a user-friendly graphical interface.",
+        "\n'SmartEsprit' is a modern desktop application for Ubuntu designed to simplify tasks and enhance user experience. Developed primarily in the C language, the application utilizes the power of Glade-2.12.2 to present a user-friendly graphical interface.",
       french:
-        "'SmartEsprit' est une application de bureau moderne pour Ubuntu conçue pour simplifier les tâches et améliorer l'expérience utilisateur Développée principalement en langage C, l'application utilise la puissance de Glade-2.12.2 pour présenter une interface graphique conviviale.",
+        "\n'SmartEsprit' est une application de bureau moderne pour Ubuntu conçue pour simplifier les tâches et améliorer l'expérience utilisateur Développée principalement en langage C, l'application utilise la puissance de Glade-2.12.2 pour présenter une interface graphique conviviale.",
     },
     tools: {
-      english: "Technical Environments : C, Glade, Linux, Git",
+      english: "Key Words : C, Glade, Linux, Git",
       french: "Environnements techniques : C, Glade, Linux, Git",
     },
     link: "https://github.com/FirasBenAbdallah/SmartEsprit.git",

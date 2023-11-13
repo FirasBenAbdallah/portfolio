@@ -48,29 +48,28 @@ const BodyComp = ({ language, theme }) => {
             return (
               <article className="article-item" key={index}>
                 <div className="left">
-                  <img src={item.image} alt="project-slug" />
+                  <a
+                    href={item.imgLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={item.image} alt="project-slug" />
+                  </a>
                 </div>
                 <div className="right">
                   <div className="projects-info">
                     <h3>{item.title[language]}</h3>
                     <span>{item.date}</span>
                   </div>
-                  {/* <p>
-                    {item.description.split("\n").map((str, index, array) =>
-                      index === array.length - 1 ? (
-                        str
-                      ) : (
-                        <>
-                          {str}
-                          <br />
-                          <span style={{ color: "#909090" }}>
-                            Environnements techniques :
-                          </span>
-                        </>
-                      )
-                    )}
-                  </p> */}
-                  <p>{item.description[language]}</p>
+                  {item.description[language].split("\n").map((line, index) => (
+                    <span
+                      key={index}
+                      style={{ textAlign: "justify", display: "block" }}
+                    >
+                      {line}
+                      <br />
+                    </span>
+                  ))}
                   <p>
                     {item.tools[language].split("\n").map((str, index) => {
                       // Split the string at ":"
@@ -78,9 +77,9 @@ const BodyComp = ({ language, theme }) => {
                       // Check if the first part is one of the titles
                       const isTitle = [
                         "Environnements techniques",
-                        "Technical Environments",
+                        "Key Words",
                         "Outil de gestion",
-                        "Management Tool",
+                        "Management Tools",
                         "IDE",
                       ].includes(parts[0].trim());
                       return (
