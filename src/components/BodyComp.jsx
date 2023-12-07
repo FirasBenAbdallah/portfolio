@@ -1,6 +1,12 @@
 import { Button, Divider } from "antd";
 import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
-import { body, aboutMe, projects, experience } from "../data/body";
+import {
+  body,
+  aboutMe,
+  recentProjects,
+  projects,
+  experience,
+} from "../data/body";
 import AsideComp from "./AsideComp";
 import "../styles/Aside.css";
 
@@ -19,22 +25,28 @@ const BodyComp = ({ language, theme }) => {
         <section className="projects">
           <h2>{body.project[language]}</h2>
           <article>
-            <img
-              className="featured-img"
-              src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221123132725/Top-Software-Engineering-Projects-Ideas.png"
-              alt="slug"
-            />
+            <a
+              href="https://imgur.com/a/hKTAcYf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="featured-img"
+                src={recentProjects.image}
+                alt="slug"
+              />
+            </a>
             <div className="project-info">
-              <h3>Site web de gestion de medias sociaux</h3>
+              <h3>{recentProjects.title[language]}</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                ducimus laudantium maiores perspiciatis commodi quae excepturi
-                magni! Veniam eos voluptates eius accusantium saepe fuga atque
-                ab hic animi, quisquam dicta? Eligendi temporibus reprehenderit
-                fuga quos nisi beatae et neque doloribus nulla similique
-                blanditiis labore corrupti non animi facere obcaecati modi iure,
-                maxime accusamus cumque, id, consequatur quae aut ducimus!
-                Consequatur.
+                {recentProjects.description[language]
+                  .split("\n")
+                  .map((line) => (
+                    <span key={line}>
+                      {line}
+                      <br />
+                    </span>
+                  ))}
               </p>
               <div className="project-link">
                 <Button className="btn" icon={<LikeOutlined />}>

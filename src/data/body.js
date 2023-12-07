@@ -28,27 +28,74 @@ export const aboutMe = {
   },
 };
 
+export const recentProjects = {
+  image: "https://i.imgur.com/sCsgXez.png",
+  imageLink: "https://imgur.com/a/hKTAcYf",
+  title: {
+    english: "Web Application « PFE Management »",
+    french: "Application Web « PFE MANGEMENT »",
+  },
+  description: {
+    english: ``,
+    french: `
+    Le projet que nous entreprenons vise à la création d'un site web spécialisé destiné aux administrateurs, aux encadrants pédagogiques, et aux évaluateurs impliqués dans le processus des projets de fin d'études (PFE) au sein de notre institution académique. Ce site web aura pour mission de rationaliser et de simplifier l'ensemble du processus de gestion des PFE, offrant des fonctionnalités essentielles pour une gestion efficace et transparente.
+
+    Les principales fonctionnalités de ce site web incluront :
+    •	Gestion des Candidats : Permettre l'inscription, la mise à jour et le suivi des candidats participant aux PFE, avec une gestion complète des informations personnelles, des parcours académiques et des sujets de PFE choisis.
+    •	Gestion des Années Scolaires : Faciliter la gestion des différentes années scolaires, permettant ainsi un suivi précis et organisé des PFE au fil du temps
+    •	Gestion des Sujets de PFE : Offrir un système de gestion des sujets de PFE, incluant la création, la modification, et la suppression des sujets. Les étudiants pourront sélectionner des sujets, tandis que les encadrants pourront proposer des sujets et les administrateurs pourront les valider.
+    •	Gestion des Sessions : Organiser et gérer les sessions d'évaluation des PFE, permettant aux évaluateurs et aux candidats de s'engager dans un processus structuré.
+    •	Répartition des Évaluateurs : Automatiser la répartition équitable des évaluateurs pour chaque sujet de PFE, en prenant en compte les compétences, les disponibilités et les préférences des évaluateurs.
+    •	Attribution des Notes et des Remarques : Offrir aux évaluateurs et aux encadrants la possibilité d'attribuer des notes et de fournir des remarques détaillées pour chaque candidat et pour chaque équipe de projet. Cette fonctionnalité est essentielle pour évaluer le travail des étudiants de manière objective et constructive.
+
+    Le site est développé en utilisant des technologies avancées telles qu'Angular et Symfony, assurant une expérience utilisateur fluide, une sécurité solide et une évolutivité pour l'avenir.`,
+  },
+  tools: {
+    english: "",
+    french: "",
+  },
+  link: "",
+};
+
 // Translate Projects
 export const projects = [
+  // Addinn Project (Android)
   {
     id: 1,
-    image:
-      "https://cdn-developer-wp.arc.dev/wp-content/uploads/2022/06/coding-programming-project-ideas-1128x635.jpg",
+    image: "https://i.imgur.com/xJOz8pb.jpg",
+    imgLink: "https://imgur.com/a/HdH9oM3",
     title: {
-      english: "Development of a web application with Laravel and React Js",
-      french: "Developpement d'une application web avec Laravel et React Js",
+      english: "Development of a mobile application « Team-Addinn »",
+      french: "Développement d’une application mobile « Team-Addinn »",
     },
     description: {
-      english:
-        "Technical Environments : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nManagement Tool : GitLab, Postman\nIDE : Visual Studio Code",
-      french:
-        "Environnements techniques : Laravel, ReactJS, MySQL, Bootstrap5, GitLab\nOutil de gestion : GitLab, Postman\nIDE : Visual Studio Code",
+      english: `
+      Team-Addin is an Android application designed to invigorate collaboration within Addinn Group. It integrates key features for effective interaction:
+
+      - Polls: Creating and participating in polls to gather member feedback.
+      - Real-Time Chat: Instant communication to facilitate internal collaboration.
+      - Discussion Channels: Dedicated channels for general discussions, file management, and the creation of custom groups.
+      - Event Calendar: Viewing and adding corporate events.
+
+      Team-Addin aims to enrich communication and engagement within Addinn by providing a digital workspace that centralizes exchanges and encourages the sharing of ideas.`,
+      french: `
+      Team-Addin est une application Android conçue pour dynamiser la collaboration au sein de Addinn Groupe. Elle intègre des fonctionnalités clés pour une interaction efficace :
+      
+      - Sondages : Création et participation à des sondages pour recueillir les avis des membres.
+      - Chat en Temps Réel : Communication instantanée pour faciliter la collaboration interne.
+      - Canaux de Discussion : Canaux dédiés pour les échanges généraux, la gestion des fichiers et la création de groupes personnalisés.
+      - Calendrier d’Événements : Visualisation et ajout d'événements d'entreprise.
+      
+      Team-Addin vise à enrichir la communication et l'engagement au sein d'Addinn, en offrant un espace de travail numérique qui centralise les échanges et encourage le partage d’idées.`,
     },
     tools: {
-      english: "",
-      french: "",
+      english: "Android Jetpack compose, Firebase, GitHub",
+      french: "Android Jetpack compose, Firebase, GitHub",
     },
+    link: "https://github.com/FirasBenAbdallah/Addin.git",
   },
+
+  //
   {
     id: 2,
     image:
@@ -68,10 +115,12 @@ export const projects = [
       french: "",
     },
   },
+
+  // PIM-SIM Project (Web and Mobile)
   {
     id: 3,
     image: "https://i.imgur.com/YtKFJTe.png?4",
-    imgLink: "https://i.imgur.com/YtKFJTe.png?4",
+    imgLink: "https://imgur.com/a/dptXZcG",
     title: {
       english: "Web and Mobile Application « Education-ADO »",
       french: "Application web et mobile « Education-ADO »",
@@ -104,10 +153,12 @@ export const projects = [
     },
     link: "https://github.com/FirasBenAbdallah/PIM_SIM.git",
   },
+
+  // Social Goal Sharing Project (Android)
   {
     id: 4,
-    image: "https://i.imgur.com/GQbZvqN.jpg",
-    imgLink: "https://i.imgur.com/GQbZvqN.jpg",
+    image: "https://i.imgur.com/2P2czR1.png",
+    imgLink: "https://imgur.com/a/IyY7koE",
     title: {
       english: "Android Application « Do it ! »",
       french: "Application Android « Do it ! »",
@@ -129,6 +180,8 @@ export const projects = [
     },
     link: "https://github.com/FirasBenAbdallah/Social_Goal_Sharing.git",
   },
+
+  // Smart ESPRIT Project (Linux)
   {
     id: 5,
     image: "https://i.imgur.com/s6B6x8H.png",

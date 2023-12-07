@@ -122,7 +122,7 @@ const AsideComp = ({ language, theme }) => {
             {testimonial.link[language]}
           </Button>
         </div>
-        {/* Languages/Langues */}
+        {/* Education/Éducation */}
         <div className="section">
           <h2>{aside.title[language]}</h2>
           {education.map((item, index) => {
@@ -137,6 +137,7 @@ const AsideComp = ({ language, theme }) => {
             );
           })}
         </div>
+        {/* Languages/Langues */}
         <div className="section">
           <h2>{languages.title[language]}</h2>
           <div className="language-item">

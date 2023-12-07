@@ -172,6 +172,12 @@ footer {
   background-color: #f4f4f4;
 }
 
+/* @media (max-height: 700px) {
+  .welcome-container {
+    height: 100vh;
+  }
+} */
+
 .top-right-image {
   position: absolute;
   top: 10px;
@@ -286,6 +292,12 @@ footer {
   }
   .horizontal-line {
     padding: 0px 15px;
+  }
+}
+
+@media (max-height: 700px) {
+  .fba-img {
+    height: 60%;
   }
 }
 
