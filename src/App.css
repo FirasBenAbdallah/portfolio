@@ -152,6 +152,11 @@
   display: inline-block;
 }
 
+.links a {
+  color: #1677ff;
+  text-decoration: none;
+}
+
 /* FOOTER */
 footer {
   text-align: center;

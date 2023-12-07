@@ -1,3 +1,5 @@
+import { useState } from "react";
+import Modal from "react-modal";
 import { Button, Divider } from "antd";
 import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
 import {
@@ -11,6 +13,7 @@ import AsideComp from "./AsideComp";
 import "../styles/Aside.css";
 
 const BodyComp = ({ language, theme }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const themeClass = theme === "dark" ? "body-dark" : "body-light";
 
   return (
@@ -41,13 +44,99 @@ const BodyComp = ({ language, theme }) => {
               <p>
                 {recentProjects.description[language]
                   .split("\n")
-                  .map((line) => (
-                    <span key={line}>
+                  .map((line, index) => (
+                    <span key={index}>
                       {line}
                       <br />
                     </span>
                   ))}
               </p>
+              <br />
+              <p>
+                {recentProjects.tools[language]
+                  .split("\n")
+                  .map((str, index) => {
+                    // Split the string at ":"
+                    const parts = str.split(":");
+                    // Check if the first part is one of the titles
+                    const isTitle = [
+                      "Environnements techniques",
+                      "Key Words",
+                      "Outil de gestion",
+                      "Management Tools",
+                      "IDE",
+                    ].includes(parts[0].trim());
+                    return (
+                      <span key={index}>
+                        {/* Apply the style conditionally if the part is a title */}
+                        {isTitle && (
+                          <span style={{ color: "#909090" }}>{parts[0]}:</span>
+                        )}
+                        {parts[1]}
+                        <br />
+                      </span>
+                    );
+                  })}
+              </p>
+              <br />
+              <Button
+                type="link"
+                icon={<LinkOutlined />}
+                onClick={() => setModalIsOpen(true)}
+                // rel="noopener noreferrer"
+              >
+                {language === "french" ? "En savoir plus" : "Learn more"}
+              </Button>
+              <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={() => setModalIsOpen(false)}
+                contentLabel="Details Modal"
+                style={{
+                  content: {
+                    top: "50%",
+                    left: "50%",
+                    right: "auto",
+                    bottom: "auto",
+                    transform: "translate(-50%, -50%)",
+                    background: "#fff",
+                    borderRadius: "10px",
+                    padding: "20px",
+                    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+                  },
+                  overlay: {
+                    backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  },
+                }}
+              >
+                <h2
+                  style={{
+                    marginTop: 0,
+                    borderBottom: "2px solid #f2f2f2",
+                    paddingBottom: "10px",
+                    marginBottom: "15px",
+                  }}
+                >
+                  {language === "french" ? "Liens" : "Links"}
+                </h2>
+                <div className="links">
+                  <a
+                    href={recentProjects.link1}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    talan-pfe_mangement_front
+                  </a>
+                  <br />
+                  <br />
+                  <a
+                    href={recentProjects.link2}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    talan-pfe_mangement_back
+                  </a>
+                </div>
+              </Modal>
               <div className="project-link">
                 <Button className="btn" icon={<LikeOutlined />}>
                   Soutenir mon projet

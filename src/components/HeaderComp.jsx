@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import { Button } from "antd";
 import { header } from "../data/headerFooter";
 import profile from "../assets/images/FBA.png";
-import qrcode from "../assets/images/QrCode.png";
+import qrcode from "../assets/images/qrcode_phone.png";
 import {
   LinkedinOutlined,
   GithubOutlined,
@@ -117,7 +117,7 @@ const HeaderComp = ({ language, theme }) => {
           >
             {header.contactDetails[language]}
           </h2>
-          <img src={qrcode} alt="QrCode" />
+          <img src={qrcode} alt="QrCode" style={{ width: 300, height: 300 }} />
         </Modal>
       </div>
     </header>

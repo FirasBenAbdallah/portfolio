@@ -36,25 +36,41 @@ export const recentProjects = {
     french: "Application Web « PFE MANGEMENT »",
   },
   description: {
-    english: ``,
+    english: `
+    The project we undertook aimed to create a specialized website for administrators, educational supervisors, and evaluators involved in the process of end-of-studies projects (PFE) within our academic institution. The mission of this website was to streamline and simplify the entire PFE management process, offering essential features for effective and transparent management.
+
+    The main features of this website included:
+    • Candidate Management: Enabled registration, updating, and tracking of candidates participating in PFEs, with comprehensive management of personal information, academic pathways, and chosen PFE topics.
+    • Academic Year Management: Facilitated the management of different academic years, allowing precise and organized tracking of PFEs over time.
+    • PFE Topic Management: Provided a system for managing PFE topics, including the creation, modification, and deletion of topics. Students were able to select topics, while supervisors could propose topics and administrators could validate them.
+    • Session Management: Organized and managed the evaluation sessions of PFEs, enabling evaluators and candidates to engage in a structured process.
+    • Evaluator Allocation: Automated the equitable distribution of evaluators for each PFE topic, taking into account the skills, availability, and preferences of the evaluators.
+    • Grading and Remarks: Offered evaluators and supervisors the ability to assign grades and provide detailed remarks for each candidate and each project team. This feature was essential for objectively and constructively assessing the work of students.
+
+    The site was developed using advanced technologies such as Angular and Symfony, ensuring a smooth user experience, strong security, and scalability for the future.`,
     french: `
-    Le projet que nous entreprenons vise à la création d'un site web spécialisé destiné aux administrateurs, aux encadrants pédagogiques, et aux évaluateurs impliqués dans le processus des projets de fin d'études (PFE) au sein de notre institution académique. Ce site web aura pour mission de rationaliser et de simplifier l'ensemble du processus de gestion des PFE, offrant des fonctionnalités essentielles pour une gestion efficace et transparente.
+    Le projet que nous avons entrepris visait à la création d'un site web spécialisé destiné aux administrateurs, aux encadrants pédagogiques, et aux évaluateurs impliqués dans le processus des projets de fin d'études (PFE) au sein de notre institution académique. Ce site web avait pour mission de rationaliser et de simplifier l'ensemble du processus de gestion des PFE, offrant des fonctionnalités essentielles pour une gestion efficace et transparente.
 
-    Les principales fonctionnalités de ce site web incluront :
-    •	Gestion des Candidats : Permettre l'inscription, la mise à jour et le suivi des candidats participant aux PFE, avec une gestion complète des informations personnelles, des parcours académiques et des sujets de PFE choisis.
-    •	Gestion des Années Scolaires : Faciliter la gestion des différentes années scolaires, permettant ainsi un suivi précis et organisé des PFE au fil du temps
-    •	Gestion des Sujets de PFE : Offrir un système de gestion des sujets de PFE, incluant la création, la modification, et la suppression des sujets. Les étudiants pourront sélectionner des sujets, tandis que les encadrants pourront proposer des sujets et les administrateurs pourront les valider.
-    •	Gestion des Sessions : Organiser et gérer les sessions d'évaluation des PFE, permettant aux évaluateurs et aux candidats de s'engager dans un processus structuré.
-    •	Répartition des Évaluateurs : Automatiser la répartition équitable des évaluateurs pour chaque sujet de PFE, en prenant en compte les compétences, les disponibilités et les préférences des évaluateurs.
-    •	Attribution des Notes et des Remarques : Offrir aux évaluateurs et aux encadrants la possibilité d'attribuer des notes et de fournir des remarques détaillées pour chaque candidat et pour chaque équipe de projet. Cette fonctionnalité est essentielle pour évaluer le travail des étudiants de manière objective et constructive.
+    Les principales fonctionnalités de ce site web incluaient :
+    • Gestion des Candidats : Permettait l'inscription, la mise à jour et le suivi des candidats participant aux PFE, avec une gestion complète des informations personnelles, des parcours académiques et des sujets de PFE choisis.
+    • Gestion des Années Scolaires : Facilitait la gestion des différentes années scolaires, permettant ainsi un suivi précis et organisé des PFE au fil du temps.
+    • Gestion des Sujets de PFE : Offrait un système de gestion des sujets de PFE, incluant la création, la modification, et la suppression des sujets. Les étudiants pouvaient sélectionner des sujets, tandis que les encadrants pouvaient proposer des sujets et les administrateurs pouvaient les valider.
+    • Gestion des Sessions : Organisait et gérait les sessions d'évaluation des PFE, permettant aux évaluateurs et aux candidats de s'engager dans un processus structuré.
+    • Répartition des Évaluateurs : Automatisait la répartition équitable des évaluateurs pour chaque sujet de PFE, en prenant en compte les compétences, les disponibilités et les préférences des évaluateurs.
+    • Attribution des Notes et des Remarques : Offrait aux évaluateurs et aux encadrants la possibilité d'attribuer des notes et de fournir des remarques détaillées pour chaque candidat et pour chaque équipe de projet. Cette fonctionnalité était essentielle pour évaluer le travail des étudiants de manière objective et constructive.
 
-    Le site est développé en utilisant des technologies avancées telles qu'Angular et Symfony, assurant une expérience utilisateur fluide, une sécurité solide et une évolutivité pour l'avenir.`,
+    Le site était développé en utilisant des technologies avancées telles qu'Angular et Symfony, assurant une expérience utilisateur fluide, une sécurité solide et une évolutivité pour l'avenir.`,
   },
   tools: {
-    english: "",
-    french: "",
+    english: `Key Words : Angular, Symfony, MySQL, UML
+      Management Tools : GitLab, Postman, Trello, Slack, Xampp
+      IDE : Visual Studio Code`,
+    french: `Environnements techniques : Angular, Symfony, MySQL, UML
+      Outil de gestion : GitLab, Postman, Trello, Slack, Xampp
+      IDE : Visual Studio Code`,
   },
-  link: "",
+  link1: "https://gitlab.com/FirasBenAbdallah/talan-pfe_mangement_front",
+  link2: "https://gitlab.com/FirasBenAbdallah/talan-pfe_mangement_back",
 };
 
 // Translate Projects
@@ -89,14 +105,18 @@ export const projects = [
       Team-Addin vise à enrichir la communication et l'engagement au sein d'Addinn, en offrant un espace de travail numérique qui centralise les échanges et encourage le partage d’idées.`,
     },
     tools: {
-      english: "Android Jetpack compose, Firebase, GitHub",
-      french: "Android Jetpack compose, Firebase, GitHub",
+      english: `Key Words : Android Jetpack compose, Firebase
+      Management Tools : GitHub
+      IDE : Android Studio`,
+      french: `Environnements techniques : Android Jetpack compose, Firebase
+      Outil de gestion : GitHub
+      IDE : Android Studio`,
     },
     link: "https://github.com/FirasBenAbdallah/Addin.git",
   },
 
   //
-  {
+  /* {
     id: 2,
     image:
       "https://www.wisembly.com/assets/wizuploads/2022/12/page-event-en-800x704.webp",
@@ -114,7 +134,7 @@ export const projects = [
       english: "",
       french: "",
     },
-  },
+  }, */
 
   // PIM-SIM Project (Web and Mobile)
   {
@@ -144,10 +164,10 @@ export const projects = [
         La plateforme sert de système d'apprentissage interactif et collaboratif avec des outils adaptés aux besoins de l'enseignement et de l'apprentissage modernes.`,
     },
     tools: {
-      english: `Key Words : Angular, ReactJS, Flutter, Express.JS (Node.JS) et MongoDB.
+      english: `Key Words : Angular, ReactJS, Flutter, Express.JS (Node.JS) et MongoDB
       Management Tools : Git, Postman
       IDE : Android Studio, VS Code`,
-      french: `Environnements techniques : Angular, ReactJS, Flutter, Express.JS(Node.JS) et MongoDB.
+      french: `Environnements techniques : Angular, ReactJS, Flutter, Express.JS(Node.JS) et MongoDB
       Outil de gestion : Git, Postman
       IDE : Android Studio, VS Code`,
     },
@@ -171,10 +191,10 @@ export const projects = [
         "\nApplication de partage d'objectifs sociaux : Une application de partage d'objectifs sociaux où les utilisateurs ayant des défis et objectifs à court terme similaires, comme arrêter de fumer, faire régulièrement de l'exercice, suivre un régime, etc., se rassemblent pour se soutenir mutuellement avec la motivation et les encouragements appropriés. Une application de médias sociaux où vous pouvez publier un objectif à court terme et trouver des personnes pour vous accompagner dans l'accomplissement de celui-ci, ou vous pouvez rejoindre un objectif déjà établi. C'est donc en quelque sorte comme Instagram et Facebook, sauf qu'au lieu de suiveurs ou d'amis, vous créez et rejoignez des objectifs/défis.",
     },
     tools: {
-      english: `Key Words : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) and MongoDB.
+      english: `Key Words : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) and MongoDB
         Management Tools : Git, Postman
         IDE : Android Studio`,
-      french: `Environnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB.
+      french: `Environnements techniques : Android (Kotlin), XML, Gradle, Express.JS (Node.JS) et MongoDB
         Outil de gestion : Git, Postman
         IDE : Android Studio`,
     },
