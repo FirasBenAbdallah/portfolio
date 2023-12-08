@@ -32,14 +32,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+initializeApp(firebaseConfig);
+const db = getFirestore();
 
 const BodyComp = ({ language, theme }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const themeClass = theme === "dark" ? "body-dark" : "body-light";
 
   const [likeCount, setLikeCount] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
 
   useEffect(() => {
     // Reference to the document
@@ -60,10 +61,9 @@ const BodyComp = ({ language, theme }) => {
 
   const handleLike = async () => {
     const likeDocRef = doc(db, "Likes", "x1SnaW63GkpmYLmpbU8L");
-
     try {
-      // Update the like count, creating the document if it does not exist
       await setDoc(likeDocRef, { like: increment(1) }, { merge: true });
+      setIsLiked(true); // Set isLiked to true after the button is clicked
     } catch (error) {
       console.error("Error incrementing like count: ", error);
     }
@@ -191,10 +191,18 @@ const BodyComp = ({ language, theme }) => {
                 </div>
               </Modal>
               <div className="project-link">
+                {/* <Button
+                  className="btn"
+                  icon={<LikeOutlined />}
+                  onClick={handleLike}
+                >
+                  Soutenir mon projet ({likeCount})
+                </Button> */}
                 <Button
                   className="btn"
                   icon={<LikeOutlined />}
                   onClick={handleLike}
+                  disabled={isLiked} // Disable the button based on the isLiked state
                 >
                   Soutenir mon projet ({likeCount})
                 </Button>
