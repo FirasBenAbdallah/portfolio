@@ -1,4 +1,12 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { initializeApp } from "firebase/app";
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  onSnapshot,
+  increment,
+} from "firebase/firestore";
 import Modal from "react-modal";
 import { Button, Divider } from "antd";
 import { LikeOutlined, LinkOutlined } from "@ant-design/icons";
@@ -12,9 +20,54 @@ import {
 import AsideComp from "./AsideComp";
 import "../styles/Aside.css";
 
+// Firebase configuration from your Firebase project settings
+const firebaseConfig = {
+  apiKey: "AIzaSyCt0MkdLBml7r3jpuNq8zi5oPY6SDg5vl8",
+  authDomain: "portfolio-8ba82.firebaseapp.com",
+  projectId: "portfolio-8ba82",
+  storageBucket: "portfolio-8ba82.appspot.com",
+  messagingSenderId: "501077437672",
+  appId: "1:501077437672:web:9ef2ba8efe8c0459b5ad5d",
+  measurementId: "G-MXL1ZSB8N6",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 const BodyComp = ({ language, theme }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const themeClass = theme === "dark" ? "body-dark" : "body-light";
+
+  const [likeCount, setLikeCount] = useState(0);
+
+  useEffect(() => {
+    // Reference to the document
+    const likeDocRef = doc(db, "Likes", "x1SnaW63GkpmYLmpbU8L");
+
+    // Listen for real-time updates
+    const unsubscribe = onSnapshot(likeDocRef, (doc) => {
+      if (doc.exists()) {
+        setLikeCount(doc.data().like);
+      } else {
+        console.log("No such document!");
+      }
+    });
+
+    // Detach listener when the component unmounts
+    return () => unsubscribe();
+  }, []);
+
+  const handleLike = async () => {
+    const likeDocRef = doc(db, "Likes", "x1SnaW63GkpmYLmpbU8L");
+
+    try {
+      // Update the like count, creating the document if it does not exist
+      await setDoc(likeDocRef, { like: increment(1) }, { merge: true });
+    } catch (error) {
+      console.error("Error incrementing like count: ", error);
+    }
+  };
 
   return (
     <div className={`body-container ${themeClass}`}>
@@ -138,8 +191,12 @@ const BodyComp = ({ language, theme }) => {
                 </div>
               </Modal>
               <div className="project-link">
-                <Button className="btn" icon={<LikeOutlined />}>
-                  Soutenir mon projet
+                <Button
+                  className="btn"
+                  icon={<LikeOutlined />}
+                  onClick={handleLike}
+                >
+                  Soutenir mon projet ({likeCount})
                 </Button>
               </div>
             </div>

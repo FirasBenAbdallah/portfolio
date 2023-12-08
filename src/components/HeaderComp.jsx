@@ -60,10 +60,6 @@ const HeaderComp = ({ language, theme }) => {
               </a>
             </div>
 
-            <div className="contact-item">
-              <TwitterOutlined style={{ color: "white" }} />
-            </div>
-
             {/* Facebook */}
             <div className="contact-item">
               <a
@@ -72,6 +68,16 @@ const HeaderComp = ({ language, theme }) => {
                 rel="noopener noreferrer"
               >
                 <FacebookOutlined style={{ color: "white" }} />
+              </a>
+            </div>
+
+            <div className="contact-item">
+              <a
+                href="https://twitter.com/FBA_1920"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <TwitterOutlined style={{ color: "white" }} />
               </a>
             </div>
           </div>

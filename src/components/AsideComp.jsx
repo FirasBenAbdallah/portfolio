@@ -38,7 +38,13 @@ const AsideComp = ({ language, theme }) => {
           <div className="contact-item">
             <LinkOutlined />
             <span>
-              <a href="">www.siteweb.com</a>
+              <a
+                href="https://firasbenabdallah.github.io/portfolio/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                www.siteweb.com
+              </a>
             </span>
           </div>
         </div>
