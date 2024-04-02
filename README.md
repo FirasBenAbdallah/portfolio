@@ -6,6 +6,8 @@ This repository contains the personal portfolio of Firas Ben Abdallah, a compute
 
 ![Screenshot of the Portfolio](/src/assets/images/portfolio.png) <!-- You can add a screenshot here -->
 
+To view a live example, [click here](https://firasbenabdallah.github.io/portfolio/)
+
 ## About Me
 
 In my third year of engineering at l'École Supérieure Privée d'Ingénieurs et de Technologie (ESPRIT), I have excelled in the domains of web and mobile development, testing, and DevOps. With a solid academic background and a passion for quality assurance and integration, I am currently looking for a PFE internship. My goal is to utilize my skills to contribute significantly to innovative initiatives while optimizing development and deployment processes.
