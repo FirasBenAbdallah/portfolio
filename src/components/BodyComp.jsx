@@ -68,6 +68,16 @@ const BodyComp = ({ language, theme }) => {
       console.error("Error incrementing like count: ", error);
     }
   };
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className={`body-container ${themeClass}`}>
@@ -202,7 +212,7 @@ const BodyComp = ({ language, theme }) => {
                   className="btn"
                   icon={<LikeOutlined />}
                   onClick={handleLike}
-                  disabled={isLiked} // Disable the button based on the isLiked state
+                  disabled={isLiked}
                 >
                   Soutenir mon projet ({likeCount})
                 </Button>
@@ -277,7 +287,7 @@ const BodyComp = ({ language, theme }) => {
           })}
         </section>
 
-        <section className="experiences">
+        {/* <section className="experiences">
           <h2>{body.title[language]}</h2>
           {experience.map((item) => {
             return (
@@ -291,7 +301,7 @@ const BodyComp = ({ language, theme }) => {
                 </div>
                 <p>
                   {item.description[language]
-                    .split("\n")
+                    .split("\n-")
                     .map((str, index, array) =>
                       index === array.length - 1 ? (
                         str
@@ -309,9 +319,76 @@ const BodyComp = ({ language, theme }) => {
               </article>
             );
           })}
+        </section> */}
+        <section className="experiences">
+          <h2>{body.title[language]}</h2>
+          {experience.map((item, index) => (
+            <div key={item.id}>
+              <article>
+                <div
+                  className="experience-info"
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
+                  <div>
+                    <h3 style={{ marginBottom: 0 }}>{item.title[language]}</h3>
+                  </div>
+                  <div>
+                    <span>{item.date[language]}</span>
+                  </div>
+                </div>
+                <div style={{ marginTop: "5px" }}>
+                  {item.description[language].split("\n").map((line, idx) => (
+                    <p key={idx} style={{ margin: "4px 0" }}>
+                      {line}
+                    </p>
+                  ))}
+                  {item.environment && (
+                    <p>
+                      <strong style={{ color: "#909090", fontStyle: "italic" }}>
+                        {item.environment[language].split(":")[0]} :
+                      </strong>
+                      {item.environment[language].split(":")[1]}
+                    </p>
+                  )}
+                </div>
+              </article>
+
+              {/* ✅ Ligne séparatrice entre les expériences sauf la dernière */}
+              {index < experience.length - 1 && (
+                <Divider
+                  style={{
+                    margin: "20px 0",
+                    backgroundColor: theme === "dark" ? "#f0f0f0" : "#909090",
+                  }}
+                />
+              )}
+            </div>
+          ))}
         </section>
       </div>
       <AsideComp language={language} theme={theme} />
+      {/** Bouton Scroll vers le haut */}
+      {showScrollTop && (
+        <Button
+          type="primary"
+          shape="circle"
+          icon={<span style={{ fontWeight: "bold" }}>↑</span>}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{
+            position: "fixed",
+            bottom: "30px",
+            right: "30px",
+            zIndex: 999,
+            backgroundColor: theme === "dark" ? "#0dbe3e" : "#001529",
+            color: "#fff",
+            border: "none",
+            boxShadow:
+              theme === "dark"
+                ? "0 2px 10px rgba(255, 255, 255, 0.7)"
+                : "0 2px 10px rgba(0, 0, 0, 0.7)",
+          }}
+        />
+      )}
     </div>
   );
 };

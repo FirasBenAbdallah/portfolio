@@ -22,9 +22,9 @@ export const aboutMe = {
   },
   description: {
     english:
-      "In my third year of computer engineering at the Private Higher School of Engineering and Technology (ESPRIT), I distinguished myself in the fields of web and mobile development, testing, and DevOps practices. With a solid academic background combined with a passion for quality assurance and continuous integration, I am currently looking for a final year internship (PFE). My goal is to implement these skills and make a significant contribution to innovative initiatives, while optimizing development and deployment processes.",
+      "Graduated as a computer engineer from ESPRIT, with a specialization in mobile information systems, I have distinguished myself in web and mobile development, software testing, and DevOps practices. Through hands-on experience with technologies such as .NET MAUI, Android Jetpack Compose, Symfony, React, Angular, and the implementation of CI/CD pipelines using Jenkins, I have developed a versatile technical skill set. Currently serving as IT Manager at Berg Life Science, I oversee IT infrastructure, security, and the validation of computerized systems (ERP SAGE, Qualipro), while managing technical support and coordinating with service providers. My background is further enriched by prior military service, where I developed discipline, analytical thinking, and adaptability. Passionate about optimizing development processes and software quality, I am eager to contribute to innovative projects in agile environments.",
     french:
-      "En ma troisième année d'ingénierie en informatique à l'École Supérieure Privée d'Ingénieurs et de Technologie (ESPRIT), je me suis distingué dans les domaines du développement web et mobile, du testing et des pratiques DevOps. Avec une solide formation académique associée à une passion pour l'assurance qualité et l'intégration continue, je suis actuellement à la recherche d'un stage PFE. Mon objectif est de mettre en œuvre ces compétences et de contribuer de manière significative à des initiatives innovantes, tout en optimisant les processus de développement et de déploiement.",
+      "Titulaire d’un diplôme d’ingénieur en informatique de l’école ESPRIT, spécialisé en systèmes d'information mobile, je me suis distingué dans le développement web et mobile, les tests logiciels, ainsi que les pratiques DevOps. Grâce à mes expériences dans des projets concrets utilisant .NET MAUI, Android Jetpack Compose, Symfony, React, Angular, ainsi que la mise en place de pipelines CI/CD avec Jenkins, j’ai acquis une expertise polyvalente. Actuellement responsable IT chez Berg Life Science, je supervise l'infrastructure informatique, la sécurité, et la validation des systèmes informatisés (ERP SAGE, Qualipro), tout en assurant le support technique et le pilotage des prestataires. Mon parcours a également été enrichi par une expérience antérieure dans les forces armées, qui m’a permis de développer rigueur, esprit d’analyse et capacité d’adaptation. Passionné par l’optimisation des processus de développement et la qualité logicielle, je suis motivé à contribuer activement à des projets innovants en environnement agile.",
   },
 };
 
@@ -230,7 +230,49 @@ export const experience = [
   {
     id: 1,
     title: {
-      english: "Talan Tunisie : Engineering Internship",
+      english: "Berg Life Sciences : IT Manager",
+      french: "Berg Life Sciences : Responsable It",
+    },
+    date: {
+      english: "October 2024 - present",
+      french: "Octobre 2024 - présent",
+    },
+    description: {
+      english: `• Implementation of cloud tools for backup and IT service continuity.
+                • Development and maintenance of web features with WordPress and PHP, management of Microsoft SQL databases.
+                • Definition of system/network architecture, security policy, and ERP management.`,
+      french: `• Mise en place d’outils cloud pour la sauvegarde et la continuité des services IT.
+              • Développement et maintenance de fonctionnalités web avec WordPress et PHP, gestion des bases Microsoft SQL.
+              • Définition de l’architecture système/réseaux, de la politique de sécurité et Gestion de l'ERP.`,
+    },
+  },
+  {
+    id: 2,
+    title: {
+      english: "TSI Tunisia : Full Stack .Net Developer",
+      french: "TSI Tunisie : Développeur Full stack .Net",
+    },
+    date: {
+      english: "January 2024 - September 2024",
+      french: "Janvier 2024 - Septembre 2024",
+    },
+    description: {
+      english: `• Development of a web and mobile application on the client and server side and connecting it to an ERP system.
+                • Contribution to the study and design of the solution.
+                • Participation in sprint planning, review, and daily.`,
+      french: `• Développement d’une application web et mobile côté client et serveur et la connectée à un système ERP.
+              • Contribution à l’étude et conception de la solution.
+              • Participation au sprint planning, review et daily.`,
+    },
+    environment: {
+      english: `Technical Environments : C#, .Net, Angular, MAUI, ERP, ETL, Entity Framework, Azure, Microsoft SQL Server, Git, Scrum Agile`,
+      french: `Environnements techniques : C#, .Net, Angular, MAUI, ERP, ETL, Entity Framework, Azure, Microsoft SQL Server, Git, Scrum Agile`,
+    },
+  },
+  {
+    id: 3,
+    title: {
+      english: "Talan Tunisia : Engineering Internship",
       french: "Talan Tunisie : Stage d'ingénieur",
     },
     date: {
@@ -238,14 +280,16 @@ export const experience = [
       french: "Juillet 2023- Août 2023",
     },
     description: {
-      english:
-        "Development of a web application 'PFE Management'\n Angular, Symfony, MySQL, Rest API, Bootstrap5, GitLab",
-      french:
-        "Développement d’une application web 'PFE Management'\n Angular, Symfony, MySQL, Rest API, Bootstrap5, GitLab",
+      english: "Development of a web application 'PFE Management'",
+      french: "Développement d’une application web 'PFE Management'",
+    },
+    environment: {
+      english: `Technical Environments : Angular, Symfony, MySQL, Rest API, Bootstrap5, GitLab`,
+      french: `Environnements techniques : Angular, Symfony, MySQL, Rest API, Bootstrap5, GitLab`,
     },
   },
   {
-    id: 2,
+    id: 4,
     title: {
       english: "ADDINN Group : Engineering Internship",
       french: "ADDINN Group : Stage d'ingénieur",
@@ -255,14 +299,16 @@ export const experience = [
       french: "Mai 2023- Juin 2023",
     },
     description: {
-      english:
-        "Development of a mobile application 'Team-Addinn'\n Android Jetpack, Firebase, GitHub",
-      french:
-        "Développement d’une application mobile 'Team-Addinn'\n Android Jetpack, Firebase, GitHub",
+      english: "Development of a mobile application 'Team-Addinn'",
+      french: "Développement d’une application mobile 'Team-Addinn'",
+    },
+    environment: {
+      english: `Technical Environments : Android Jetpack Compose, Firebase, GitHub`,
+      french: `Environnements techniques : Android Jetpack Compose, Firebase, GitHub`,
     },
   },
   {
-    id: 3,
+    id: 5,
     title: {
       english: "ABCeez Digital : Summer Internship",
       french: "ABCeez Digital : Stage d’été",
@@ -272,14 +318,16 @@ export const experience = [
       french: "Juillet 2022-Août 2022",
     },
     description: {
-      english:
-        "Development of a front-end web application\n HTML5, CSS3, Bootstrap5, ReactJS, JavaScript",
-      french:
-        "Développement d’une application web front-end\n HTML5, CSS3, Bootstrap5, ReactJS, JavaScript",
+      english: "Development of a front-end web application",
+      french: "Développement d’une application web front-end",
+    },
+    environment: {
+      english: `Technical Environments : HTML5, CSS3, Bootstrap5, ReactJS, JavaScript`,
+      french: `Environnements techniques : HTML5, CSS3, Bootstrap5, ReactJS, JavaScript`,
     },
   },
   {
-    id: 4,
+    id: 6,
     title: {
       english: "CCMed Belgium : First Aid Internship",
       french: "CCMed Belgique : Stage Secourisme",
@@ -294,7 +342,7 @@ export const experience = [
     },
   },
   {
-    id: 5,
+    id: 7,
     title: {
       english: "Ministry of Defense Tunisia : Lieutenant",
       french: "Ministère de la Défense Tunisie : Lieutenant",

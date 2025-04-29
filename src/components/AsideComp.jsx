@@ -1,3 +1,4 @@
+import React, { useState, useRef, useEffect } from "react";
 import {
   EnvironmentOutlined,
   LinkOutlined,
@@ -14,6 +15,21 @@ import {
 
 const AsideComp = ({ language, theme }) => {
   const themeClass = theme === "dark" ? "aside-dark" : "aside-light";
+  const [showEmailOptions, setShowEmailOptions] = useState(false);
+  const emailRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (emailRef.current && !emailRef.current.contains(event.target)) {
+        setShowEmailOptions(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <>
@@ -23,16 +39,54 @@ const AsideComp = ({ language, theme }) => {
             <EnvironmentOutlined />
             <span>{aside.location[language]}</span>
           </div>
-          <div className="contact-item">
+          <div
+            className="contact-item"
+            style={{ position: "relative" }}
+            ref={emailRef}
+          >
             <MailOutlined />
             <span>
               <a
-                href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setShowEmailOptions(!showEmailOptions);
+                }}
               >
                 firas.benabdallah@esprit.tn
               </a>
+              {showEmailOptions && (
+                <div
+                  style={{
+                    // position: "absolute",
+                    top: "25px",
+                    left: 0,
+                    backgroundColor: "#282828",
+                    border: "1px solid #ccc",
+                    borderRadius: "4px",
+                    padding: "5px 10px",
+                    // zIndex: 1000,
+                    boxShadow: "0 2px 8px rgba(185, 185, 15, 0.15)",
+                  }}
+                >
+                  <a
+                    href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: "block", marginBottom: "5px" }}
+                  >
+                    Gmail
+                  </a>
+                  <a
+                    href="https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: "block" }}
+                  >
+                    Outlook
+                  </a>
+                </div>
+              )}
             </span>
           </div>
           <div className="contact-item">

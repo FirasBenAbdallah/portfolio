@@ -40,23 +40,23 @@ function App() {
               >
                 {language === "french" ? (
                   <>
-                    Version française
-                    <img
-                      width="25"
-                      height="25"
-                      src="https://img.icons8.com/emoji/48/france-emoji.png"
-                      alt="france-emoji"
-                      className="versionEmoji"
-                    />
-                  </>
-                ) : (
-                  <>
                     English version
                     <img
                       width="25"
                       height="25"
                       src="https://img.icons8.com/color/48/great-britain.png"
                       alt="great-britain"
+                      className="versionEmoji"
+                    />
+                  </>
+                ) : (
+                  <>
+                    Version française
+                    <img
+                      width="25"
+                      height="25"
+                      src="https://img.icons8.com/emoji/48/france-emoji.png"
+                      alt="france-emoji"
                       className="versionEmoji"
                     />
                   </>
