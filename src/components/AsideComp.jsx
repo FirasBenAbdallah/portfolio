@@ -13,7 +13,7 @@ import {
   education,
 } from "../data/aside";
 import outlookLogo from "../assets/images/Microsoft_Outlook_new_logo.svg";
-const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+
 const AsideComp = ({ language, theme }) => {
   const themeClass = theme === "dark" ? "aside-dark" : "aside-light";
   const [showEmailOptions, setShowEmailOptions] = useState(false);
@@ -75,7 +75,7 @@ const AsideComp = ({ language, theme }) => {
                         : "0 0 10px rgba(255, 255, 255, 0.5)",
                   }}
                 >
-                  {/* <a
+                  <a
                     href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -101,44 +101,6 @@ const AsideComp = ({ language, theme }) => {
                     href="https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "8px",
-                      textDecoration: "none",
-                      color: "inherit",
-                    }}
-                  >
-                    <img
-                      src={outlookLogo}
-                      alt="Outlook"
-                      width="20"
-                      height="20"
-                    />
-                    Outlook
-                  </a> */}
-                  <a
-                    href="mailto:firas.benabdallah@esprit.tn?subject=Contact"
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "8px",
-                      marginBottom: "8px",
-                      textDecoration: "none",
-                      color: "inherit",
-                    }}
-                  >
-                    <img
-                      src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_48dp.png"
-                      alt="Gmail"
-                      width="20"
-                      height="20"
-                    />
-                    Gmail
-                  </a>
-
-                  <a
-                    href="mailto:firas.benabdallah@esprit.tn?subject=Contact"
                     style={{
                       display: "flex",
                       alignItems: "center",
