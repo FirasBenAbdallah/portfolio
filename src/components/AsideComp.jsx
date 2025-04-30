@@ -12,6 +12,7 @@ import {
   languages,
   education,
 } from "../data/aside";
+import outlookLogo from "../assets/images/Microsoft_Outlook_new_logo.svg";
 
 const AsideComp = ({ language, theme }) => {
   const themeClass = theme === "dark" ? "aside-dark" : "aside-light";
@@ -128,7 +129,8 @@ const AsideComp = ({ language, theme }) => {
                     }}
                   >
                     <img
-                      src="src\assets\images\Microsoft_Outlook_new_logo.svg"
+                      src={outlookLogo}
+                      // src="src\assets\images\Microsoft_Outlook_new_logo.svg"
                       // src="https://upload.wikimedia.org/wikipedia/commons/4/42/Outlook.com_logo_2013.png"
                       alt="Outlook"
                       width="20"
