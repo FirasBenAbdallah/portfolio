@@ -201,13 +201,6 @@ const BodyComp = ({ language, theme }) => {
                 </div>
               </Modal>
               <div className="project-link">
-                {/* <Button
-                  className="btn"
-                  icon={<LikeOutlined />}
-                  onClick={handleLike}
-                >
-                  Soutenir mon projet ({likeCount})
-                </Button> */}
                 <Button
                   className="btn"
                   icon={<LikeOutlined />}
@@ -286,40 +279,6 @@ const BodyComp = ({ language, theme }) => {
             );
           })}
         </section>
-
-        {/* <section className="experiences">
-          <h2>{body.title[language]}</h2>
-          {experience.map((item) => {
-            return (
-              <article key={item.id}>
-                <div className="experience-info">
-                  <h3>
-                    {item.title[language]}
-                    <hr />
-                  </h3>
-                  <span>{item.date[language]}</span>
-                </div>
-                <p>
-                  {item.description[language]
-                    .split("\n-")
-                    .map((str, index, array) =>
-                      index === array.length - 1 ? (
-                        str
-                      ) : (
-                        <>
-                          {str}
-                          <br />
-                          <span style={{ color: "#909090" }}>
-                            {body.environment[language]}
-                          </span>
-                        </>
-                      )
-                    )}
-                </p>
-              </article>
-            );
-          })}
-        </section> */}
         <section className="experiences">
           <h2>{body.title[language]}</h2>
           {experience.map((item, index) => (

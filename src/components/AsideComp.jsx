@@ -59,9 +59,6 @@ const AsideComp = ({ language, theme }) => {
               {showEmailOptions && (
                 <div
                   style={{
-                    // position: "absolute",
-                    // top: "25px",
-                    // left: 0,
                     backgroundColor:
                       theme === "dark" ? "#282828" : "rgba(255, 255, 255, 0.5)",
                     color: theme === "dark" ? "#fff" : "#000",
@@ -78,22 +75,6 @@ const AsideComp = ({ language, theme }) => {
                         : "0 0 10px rgba(255, 255, 255, 0.5)",
                   }}
                 >
-                  {/* <a
-                    href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: "block", marginBottom: "5px" }}
-                  >
-                    Gmail
-                  </a>
-                  <a
-                    href="https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ display: "block" }}
-                  >
-                    Outlook
-                  </a> */}
                   <a
                     href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
                     target="_blank"
@@ -130,12 +111,9 @@ const AsideComp = ({ language, theme }) => {
                   >
                     <img
                       src={outlookLogo}
-                      // src="src\assets\images\Microsoft_Outlook_new_logo.svg"
-                      // src="https://upload.wikimedia.org/wikipedia/commons/4/42/Outlook.com_logo_2013.png"
                       alt="Outlook"
                       width="20"
                       height="20"
-                      // style={{ objectFit: "cover", borderRadius: "3px" }}
                     />
                     Outlook
                   </a>
