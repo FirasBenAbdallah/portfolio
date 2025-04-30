@@ -12,6 +12,10 @@ export const header = {
     english: "My Contact Details",
     french: "Mes Coordonnées",
   },
+  phone: {
+    english: "Phone",
+    french: "Téléphone",
+  },
 };
 
 // Translate Footer

@@ -3,7 +3,8 @@ import Modal from "react-modal";
 import { Button } from "antd";
 import { header } from "../data/headerFooter";
 import profile from "../assets/images/FBA.png";
-import qrcode from "../assets/images/qrcode_phone.png";
+import qrcode from "../assets/images/qrcode_phone1.png";
+import qrcode_WhatsApp from "../assets/images/qrcode_whatsapp.png";
 import {
   LinkedinOutlined,
   GithubOutlined,
@@ -92,7 +93,7 @@ const HeaderComp = ({ language, theme }) => {
         >
           {header.contactMe[language]}
         </Button>
-        <Modal
+        {/* <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
           contentLabel="Details Modal"
@@ -123,7 +124,87 @@ const HeaderComp = ({ language, theme }) => {
           >
             {header.contactDetails[language]}
           </h2>
-          <img src={qrcode} alt="QrCode" style={{ width: 300, height: 300 }} />
+          <img
+            src={qrcode}
+            alt="QrCode_Phone"
+            style={{ width: 300, height: 300 }}
+          />
+          <img
+            src={qrcode_WhatsApp}
+            alt="QrCode_WhatsApp"
+            style={{ width: 300, height: 300 }}
+          />
+        </Modal> */}
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => setModalIsOpen(false)}
+          contentLabel="Details Modal"
+          style={{
+            content: {
+              top: "50%",
+              left: "50%",
+              right: "auto",
+              bottom: "auto",
+              transform: "translate(-50%, -50%)",
+              background: "#fff",
+              borderRadius: "10px",
+              padding: "20px",
+              boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+            },
+            overlay: {
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+            },
+          }}
+        >
+          <h2
+            style={{
+              marginTop: 0,
+              borderBottom: "2px solid #f2f2f2",
+              paddingBottom: "10px",
+              marginBottom: "15px",
+              textAlign: "center",
+            }}
+          >
+            {header.contactDetails[language]}
+          </h2>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "40px",
+            }}
+          >
+            {/* QR Phone */}
+            <div style={{ textAlign: "center" }}>
+              <h3 style={{ marginBottom: "10px" }}>{header.phone[language]}</h3>
+              <img
+                src={qrcode}
+                alt="QrCode_Phone"
+                style={{ width: 200, height: 200 }}
+              />
+            </div>
+
+            {/* Ligne verticale */}
+            <div
+              style={{
+                height: 220,
+                width: 1,
+                backgroundColor: "#ccc",
+              }}
+            />
+
+            {/* QR WhatsApp */}
+            <div style={{ textAlign: "center" }}>
+              <h3 style={{ marginBottom: "10px" }}>WhatsApp</h3>
+              <img
+                src={qrcode_WhatsApp}
+                alt="QrCode_WhatsApp"
+                style={{ width: 200, height: 200 }}
+              />
+            </div>
+          </div>
         </Modal>
       </div>
     </header>

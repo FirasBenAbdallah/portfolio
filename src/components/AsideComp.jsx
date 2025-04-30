@@ -59,17 +59,25 @@ const AsideComp = ({ language, theme }) => {
                 <div
                   style={{
                     // position: "absolute",
-                    top: "25px",
-                    left: 0,
-                    backgroundColor: "#282828",
-                    border: "1px solid #ccc",
-                    borderRadius: "4px",
+                    // top: "25px",
+                    // left: 0,
+                    backgroundColor:
+                      theme === "dark" ? "#282828" : "rgba(255, 255, 255, 0.5)",
+                    color: theme === "dark" ? "#fff" : "#000",
+                    border:
+                      theme === "dark"
+                        ? "1px solid rgba(255, 255, 255, 0.7)"
+                        : "1px solid rgb(0, 0, 0, 0.5)",
+                    borderRadius: "5px",
+                    marginTop: "5px",
                     padding: "5px 10px",
-                    // zIndex: 1000,
-                    boxShadow: "0 2px 8px rgba(185, 185, 15, 0.15)",
+                    boxShadow:
+                      theme === "dark"
+                        ? "0 0 10px rgba(185, 185, 15, 0.3)"
+                        : "0 0 10px rgba(255, 255, 255, 0.5)",
                   }}
                 >
-                  <a
+                  {/* <a
                     href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -83,6 +91,50 @@ const AsideComp = ({ language, theme }) => {
                     rel="noopener noreferrer"
                     style={{ display: "block" }}
                   >
+                    Outlook
+                  </a> */}
+                  <a
+                    href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      marginBottom: "8px",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    <img
+                      src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_48dp.png"
+                      alt="Gmail"
+                      width="20"
+                      height="20"
+                    />
+                    Gmail
+                  </a>
+
+                  <a
+                    href="https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    <img
+                      src="src\assets\images\Microsoft_Outlook_new_logo.svg"
+                      // src="https://upload.wikimedia.org/wikipedia/commons/4/42/Outlook.com_logo_2013.png"
+                      alt="Outlook"
+                      width="20"
+                      height="20"
+                      // style={{ objectFit: "cover", borderRadius: "3px" }}
+                    />
                     Outlook
                   </a>
                 </div>
