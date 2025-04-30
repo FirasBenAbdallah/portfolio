@@ -66,11 +66,11 @@ aside .section .language-item .first {
 }
 
 aside .section .language-item .second {
-  width: 85%;
+  width: 90%;
 }
 
 aside .section .language-item .third {
-  width: 70%;
+  width: 75%;
 }
 
 @media (max-width: 1000px) {

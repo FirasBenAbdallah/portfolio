@@ -13,7 +13,7 @@ import {
   education,
 } from "../data/aside";
 import outlookLogo from "../assets/images/Microsoft_Outlook_new_logo.svg";
-
+const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
 const AsideComp = ({ language, theme }) => {
   const themeClass = theme === "dark" ? "aside-dark" : "aside-light";
   const [showEmailOptions, setShowEmailOptions] = useState(false);
@@ -75,7 +75,7 @@ const AsideComp = ({ language, theme }) => {
                         : "0 0 10px rgba(255, 255, 255, 0.5)",
                   }}
                 >
-                  <a
+                  {/* <a
                     href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -99,6 +99,56 @@ const AsideComp = ({ language, theme }) => {
 
                   <a
                     href="https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    <img
+                      src={outlookLogo}
+                      alt="Outlook"
+                      width="20"
+                      height="20"
+                    />
+                    Outlook
+                  </a> */}
+                  <a
+                    href={
+                      isMobile
+                        ? "googlegmail://co?to=firas.benabdallah@esprit.tn"
+                        : "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      marginBottom: "8px",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    <img
+                      src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_48dp.png"
+                      alt="Gmail"
+                      width="20"
+                      height="20"
+                    />
+                    Gmail
+                  </a>
+
+                  <a
+                    href={
+                      isMobile
+                        ? "ms-outlook://compose?to=firas.benabdallah@esprit.tn"
+                        : "https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
+                    }
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -140,11 +190,19 @@ const AsideComp = ({ language, theme }) => {
           <br />
           <p>
             <div class="inline-container">
+              <strong>{skills.theme8[language]}</strong>
+              <hr />
+            </div>
+            <br />
+            Français B2 (TCF)
+            <br />
+            <br />
+            <div class="inline-container">
               <strong>{skills.theme1[language]}</strong>
               <hr />
             </div>
             <br />
-            Java, C#, JavaScript, Python, C, C++
+            C#, JavaScript, Java, Python, C, C++
             <br />
             <br />
             <div class="inline-container">
@@ -153,7 +211,7 @@ const AsideComp = ({ language, theme }) => {
             </div>
             <br />
             Angular, ReactJS, Express.JS/NodeJS, Spring Boot, Symfony, ASP.Net
-            core. jQuery, HTML5, CSS3, Bootstrap5, JEE.
+            core, jQuery, HTML5, CSS3, Bootstrap5, JEE.
             <br />
             <br />
             <div class="inline-container">
@@ -161,7 +219,7 @@ const AsideComp = ({ language, theme }) => {
               <hr />
             </div>
             <br />
-            Flutter, Android (Kotlin/XML/Jetpack Compose), iOS
+            Flutter, Android (Kotlin/XML/Jetpack Compose), .Net MAUI, iOS
             (SwiftUI/Storyboard)
             <br />
             <br />
@@ -178,7 +236,8 @@ const AsideComp = ({ language, theme }) => {
               <hr />
             </div>
             <br />
-            Jenkins, Docker, Nexus, Grafana/Prometheus, Vagrant
+            Jenkins, Docker, Nexus, Grafana/Prometheus, Vagrant, Jira, Maven,
+            Linux
             <br />
             <br />
             <div class="inline-container">
@@ -186,7 +245,7 @@ const AsideComp = ({ language, theme }) => {
               <hr />
             </div>
             <br />
-            JUNIT, SonarQube
+            JUNIT, SonarQube, Mockito, Postman, Swagger, Selenium
             <br />
             <br />
             <div class="inline-container">
@@ -259,7 +318,13 @@ const AsideComp = ({ language, theme }) => {
           <h2 style={{ textTransform: "uppercase", fontWeight: "bold" }}>
             Certifications
           </h2>
-          <ul style={{ paddingLeft: "0", listStyleType: "none", marginTop: "10px" }}>
+          <ul
+            style={{
+              paddingLeft: "0",
+              listStyleType: "none",
+              marginTop: "10px",
+            }}
+          >
             {[
               "Azure Data Fundamentals",
               "Azure Fundamentals (AZ-900)",

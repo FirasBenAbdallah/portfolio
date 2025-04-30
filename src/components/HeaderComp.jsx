@@ -106,9 +106,9 @@ const HeaderComp = ({ language, theme }) => {
               transform: "translate(-50%, -50%)",
               background: "#fff",
               borderRadius: "10px",
-              padding: "20px",
+              padding: "10px",
               boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
-              width: "90%",
+              width: "80%",
               maxWidth: "600px",
             },
             overlay: {

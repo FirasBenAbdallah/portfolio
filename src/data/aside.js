@@ -19,11 +19,11 @@ export const skills = {
     french: "Compétences",
   },
   theme1: {
-    english: "• Programming languages :",
+    english: "• Programming languages:",
     french: "• Langages de programmation :",
   },
   theme2: {
-    english: "• Web development :",
+    english: "• Web development:",
     french: "• Développement web :",
   },
   theme3: {
@@ -45,6 +45,10 @@ export const skills = {
   theme7: {
     english: "• AI:",
     french: "• IA :",
+  },
+  theme8: {
+    english: "• Languages:",
+    french: "• Langues :",
   },
   link: {
     english: "Learn more on Github",
