@@ -118,13 +118,7 @@ const AsideComp = ({ language, theme }) => {
                     Outlook
                   </a> */}
                   <a
-                    href={
-                      isMobile
-                        ? "googlegmail://co?to=firas.benabdallah@esprit.tn"
-                        : "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:firas.benabdallah@esprit.tn?subject=Contact"
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -144,13 +138,7 @@ const AsideComp = ({ language, theme }) => {
                   </a>
 
                   <a
-                    href={
-                      isMobile
-                        ? "ms-outlook://compose?to=firas.benabdallah@esprit.tn"
-                        : "https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
-                    }
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:firas.benabdallah@esprit.tn?subject=Contact"
                     style={{
                       display: "flex",
                       alignItems: "center",
