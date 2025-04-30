@@ -254,6 +254,33 @@ const AsideComp = ({ language, theme }) => {
             </div>
           </div>
         </div>
+        {/* Certifications */}
+        <div className="section">
+          <h2 style={{ textTransform: "uppercase", fontWeight: "bold" }}>
+            Certifications
+          </h2>
+          <ul style={{ paddingLeft: "0", listStyleType: "none", marginTop: "10px" }}>
+            {[
+              "Azure Data Fundamentals",
+              "Azure Fundamentals (AZ-900)",
+              "Dynamics 365 Fundamentals ERP (MB-920)",
+              "Power Platform Fundamentals (PL-900)",
+              "Azure AI Fundamentals (AI-900)",
+            ].map((cert, index) => (
+              <li
+                key={index}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  marginBottom: "5px",
+                }}
+              >
+                <span>• {cert}</span>
+                <span style={{ fontWeight: "bold" }}>Microsoft</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </aside>
     </>
   );

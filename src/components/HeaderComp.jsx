@@ -108,6 +108,8 @@ const HeaderComp = ({ language, theme }) => {
               borderRadius: "10px",
               padding: "20px",
               boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+              width: "90%",
+              maxWidth: "600px",
             },
             overlay: {
               backgroundColor: "rgba(0, 0, 0, 0.5)",
@@ -126,43 +128,62 @@ const HeaderComp = ({ language, theme }) => {
             {header.contactDetails[language]}
           </h2>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "40px",
-            }}
-          >
-            {/* QR Phone */}
+          {/* ✅ QR code responsive layout */}
+          <div className="qr-flex-container">
+            {/* Phone QR */}
             <div style={{ textAlign: "center" }}>
               <h3 style={{ marginBottom: "10px" }}>{header.phone[language]}</h3>
               <img
                 src={qrcode}
                 alt="QrCode_Phone"
-                style={{ width: 200, height: 200 }}
+                style={{ width: "100%", maxWidth: "200px", height: "auto" }}
               />
             </div>
 
-            {/* Ligne verticale */}
-            <div
-              style={{
-                height: 220,
-                width: 1,
-                backgroundColor: "#ccc",
-              }}
-            />
+            {/* Separator (vertical on desktop / horizontal on mobile) */}
+            <div className="qr-separator"></div>
 
-            {/* QR WhatsApp */}
+            {/* WhatsApp QR */}
             <div style={{ textAlign: "center" }}>
               <h3 style={{ marginBottom: "10px" }}>WhatsApp</h3>
               <img
                 src={qrcode_WhatsApp}
                 alt="QrCode_WhatsApp"
-                style={{ width: 200, height: 200 }}
+                style={{ width: "100%", maxWidth: "200px", height: "auto" }}
               />
             </div>
           </div>
+
+          {/* ✅ Responsive style block */}
+          <style>
+            {`
+      .qr-flex-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .qr-separator {
+        width: 1px;
+        height: 220px;
+        background-color: #ccc;
+        margin: 0 20px;
+      }
+
+      @media (max-width: 600px) {
+        .qr-flex-container {
+          flex-direction: column;
+        }
+
+        .qr-separator {
+          width: 100%;
+          height: 1px;
+          margin: 20px 0;
+        }
+      }
+    `}
+          </style>
         </Modal>
       </div>
     </header>
