@@ -14,6 +14,16 @@ import {
 } from "../data/aside";
 import outlookLogo from "../assets/images/Microsoft_Outlook_new_logo.svg";
 
+const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+const gmailLink = isMobile
+  ? "intent://mail/#Intent;package=com.google.android.gm;scheme=mailto;end"
+  : "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn";
+
+const outlookLink = isMobile
+  ? "intent://compose?to=firas.benabdallah@esprit.tn#Intent;package=com.microsoft.office.outlook;scheme=mailto;end"
+  : "https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn";
+
 const AsideComp = ({ language, theme }) => {
   const themeClass = theme === "dark" ? "aside-dark" : "aside-light";
   const [showEmailOptions, setShowEmailOptions] = useState(false);
@@ -75,7 +85,7 @@ const AsideComp = ({ language, theme }) => {
                         : "0 0 10px rgba(255, 255, 255, 0.5)",
                   }}
                 >
-                  <a
+                  {/* <a
                     href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=firas.benabdallah@esprit.tn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -101,6 +111,44 @@ const AsideComp = ({ language, theme }) => {
                     href="https://outlook.live.com/owa/?path=/mail/action/compose&to=firas.benabdallah@esprit.tn"
                     target="_blank"
                     rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    <img
+                      src={outlookLogo}
+                      alt="Outlook"
+                      width="20"
+                      height="20"
+                    />
+                    Outlook
+                  </a> */}
+                  <a
+                    href={gmailLink}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                      marginBottom: "8px",
+                      textDecoration: "none",
+                      color: "inherit",
+                    }}
+                  >
+                    <img
+                      src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_48dp.png"
+                      alt="Gmail"
+                      width="20"
+                      height="20"
+                    />
+                    Gmail
+                  </a>
+
+                  <a
+                    href={outlookLink}
                     style={{
                       display: "flex",
                       alignItems: "center",
