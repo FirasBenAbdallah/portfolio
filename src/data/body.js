@@ -1,3 +1,13 @@
+import SignIn from "../assets/images/PFE_MANGEMENT/1-Sign in.png";
+import UserProfile from "../assets/images/PFE_MANGEMENT/2-User profile.png";
+import Sessions from "../assets/images/PFE_MANGEMENT/3-Sessions.png";
+import Subjects from "../assets/images/PFE_MANGEMENT/4-Subjects.png";
+import AcademicYears from "../assets/images/PFE_MANGEMENT/5-Academic years.png";
+import Candidates from "../assets/images/PFE_MANGEMENT/6-Candidates.png";
+import Users from "../assets/images/PFE_MANGEMENT/7-Users.png";
+import Teams from "../assets/images/PFE_MANGEMENT/8-Teams.png";
+import AddForm from "../assets/images/PFE_MANGEMENT/9-Add form.png";
+import DeleteConfirmation from "../assets/images/PFE_MANGEMENT/10-Delete confirmation.png";
 // Translate Body
 export const body = {
   title: {
@@ -29,8 +39,53 @@ export const aboutMe = {
 };
 
 export const recentProjects = {
-  image: "https://i.imgur.com/sCsgXez.png",
-  imageLink: "https://imgur.com/a/hKTAcYf",
+  image: SignIn,
+  // Direct image URLs: the gallery displays these without leaving the portfolio.
+  gallery: [
+    {
+      src: SignIn,
+      caption: { english: "Sign in", french: "Connexion" },
+    },
+    {
+      src: UserProfile,
+      caption: { english: "User profile", french: "Profil utilisateur" },
+    },
+    {
+      src: Sessions,
+      caption: { english: "Sessions", french: "Sessions" },
+    },
+    {
+      src: Subjects,
+      caption: { english: "Subjects", french: "Gestion des sujets" },
+    },
+    {
+      src: AcademicYears,
+      caption: { english: "Academic years", french: "Années universitaires" },
+    },
+    {
+      src: Candidates,
+      caption: { english: "Candidates", french: "Candidats" },
+    },
+    {
+      src: Users,
+      caption: { english: "Users", french: "Gestion des utilisateurs" },
+    },
+    {
+      src: Teams,
+      caption: { english: "Teams", french: "Équipes" },
+    },
+    {
+      src: AddForm,
+      caption: { english: "Add form", french: "Formulaire d’ajout" },
+    },
+    {
+      src: DeleteConfirmation,
+      caption: {
+        english: "Delete confirmation",
+        french: "Confirmation de suppression",
+      },
+    },
+  ],
   title: {
     english: "Web Application « PFE Management »",
     french: "Application Web « PFE MANGEMENT »",

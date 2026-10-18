@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { initializeApp } from "firebase/app";
 import {
   getFirestore,
@@ -35,8 +35,246 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 const db = getFirestore();
 
+const galleryImages = recentProjects.gallery?.length
+  ? recentProjects.gallery
+  : [{ src: recentProjects.image, caption: recentProjects.title }];
+
+const galleryStyles = `
+  .pfe-gallery-trigger {
+    position: relative; display: block; width: 100%; padding: 0;
+    border: 0; border-radius: 8px; background: transparent;
+    color: inherit; cursor: zoom-in; overflow: hidden;
+  }
+  .pfe-gallery-trigger .featured-img { display: block; width: 100%; }
+  .pfe-gallery-hint {
+    position: absolute; right: 12px; bottom: 12px; padding: 7px 11px;
+    border-radius: 20px; background: rgba(0, 0, 0, .78);
+    color: #fff; font-size: 13px; line-height: 1.4;
+  }
+  .pfe-gallery-overlay {
+    position: fixed; inset: 0; z-index: 2000; display: grid;
+    place-items: center; padding: 16px; background: rgba(0, 0, 0, .85);
+  }
+  .pfe-gallery-dialog {
+    box-sizing: border-box; width: min(1180px, 100%);
+    max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px);
+    padding: 16px; overflow: auto; border: 1px solid #707070;
+    border-radius: 14px; outline: none;
+    background: var(--gallery-bg); color: var(--gallery-text);
+  }
+  .pfe-gallery-heading {
+    display: flex; justify-content: space-between;
+    align-items: center; gap: 16px;
+  }
+  .pfe-gallery-title {
+    margin: 0 !important; color: inherit !important;
+    font-size: clamp(17px, 2.5vw, 23px); line-height: 1.35;
+  }
+  .pfe-gallery-dialog button { font: inherit; cursor: pointer; }
+  .pfe-gallery-close, .pfe-gallery-nav {
+    display: grid; place-items: center; flex-shrink: 0;
+    width: 42px; height: 42px; padding: 0; border: 0;
+    border-radius: 50%; background: #353c45; color: #fff;
+    font-size: 28px !important; line-height: 1;
+  }
+  .pfe-gallery-stage {
+    display: grid; grid-template-columns: 42px minmax(0, 1fr) 42px;
+    align-items: center; gap: 12px; padding: 14px 0;
+  }
+  .pfe-gallery-figure { min-width: 0; margin: 0; text-align: center; }
+  .pfe-gallery-image, .pfe-gallery-error {
+    box-sizing: border-box; display: block; width: 100%;
+    height: min(58vh, 620px); height: min(58dvh, 620px);
+    object-fit: contain; border-radius: 8px; background: #11151a;
+  }
+  .pfe-gallery-error {
+    display: grid; place-items: center; margin: 0;
+    padding: 20px; color: #fff;
+  }
+  .pfe-gallery-caption { margin-top: 10px; line-height: 1.4; }
+  .pfe-gallery-thumbnails {
+    display: flex; gap: 8px; overflow-x: auto; padding: 4px 4px 8px;
+  }
+  .pfe-gallery-thumbnail {
+    flex: 0 0 88px; padding: 0; overflow: hidden;
+    border: 2px solid transparent; border-radius: 7px; background: #353c45;
+  }
+  .pfe-gallery-thumbnail[aria-current="true"] { border-color: #0dbe3e; }
+  .pfe-gallery-thumbnail img {
+    display: block; width: 84px; height: 50px; object-fit: cover;
+  }
+  .pfe-gallery-trigger:focus-visible, .pfe-gallery-dialog button:focus-visible {
+    outline: 3px solid #0dbe3e; outline-offset: 2px;
+  }
+  @media (max-width: 600px) {
+    .pfe-gallery-overlay { padding: 8px; }
+    .pfe-gallery-dialog {
+      padding: 12px; max-height: calc(100vh - 16px);
+      max-height: calc(100dvh - 16px);
+    }
+    .pfe-gallery-stage {
+      grid-template-columns: 1fr 1fr; gap: 10px;
+    }
+    .pfe-gallery-figure { grid-column: 1 / -1; grid-row: 1; }
+    .pfe-gallery-nav {
+      grid-row: 2; justify-self: center; width: 44px; height: 44px;
+    }
+    .pfe-gallery-image { height: auto; max-height: 55vh; max-height: 55dvh; }
+    .pfe-gallery-error { height: 30vh; height: 30dvh; }
+    .pfe-gallery-hint { right: 8px; bottom: 8px; font-size: 12px; }
+  }
+`;
+
+const GalleryImage = ({ image, caption, language }) => {
+  const [hasError, setHasError] = useState(false);
+
+  return hasError ? (
+    <p className="pfe-gallery-error" role="status">
+      {language === "french"
+        ? "Cette capture n’a pas pu être chargée."
+        : "This screenshot could not be loaded."}
+    </p>
+  ) : (
+    <img
+      className="pfe-gallery-image"
+      src={image.src}
+      alt={caption}
+      decoding="async"
+      onError={() => setHasError(true)}
+    />
+  );
+};
+
+const ProjectGallery = ({ isOpen, onClose, language, theme }) => {
+  const [imageIndex, setImageIndex] = useState(0);
+  const closeButtonRef = useRef(null);
+  const isFrench = language === "french";
+  const currentImage = galleryImages[imageIndex];
+  const caption = currentImage.caption[language];
+
+  const navigate = (direction) => {
+    setImageIndex((index) =>
+      (index + direction + galleryImages.length) % galleryImages.length
+    );
+  };
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    setImageIndex(0);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.altKey || event.ctrlKey || event.metaKey) return;
+      const direction = event.key === "ArrowRight" ? 1
+        : event.key === "ArrowLeft" ? -1 : 0;
+      if (direction) {
+        event.preventDefault();
+        setImageIndex((index) =>
+          (index + direction + galleryImages.length) % galleryImages.length
+        );
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isOpen]);
+
+  return (
+    <Modal
+      isOpen={isOpen}
+      onRequestClose={onClose}
+      onAfterOpen={() => closeButtonRef.current?.focus()}
+      appElement={typeof document !== "undefined"
+        ? document.getElementById("root") : undefined}
+      aria={{ labelledby: "pfe-gallery-title" }}
+      className="pfe-gallery-dialog"
+      overlayClassName="pfe-gallery-overlay"
+      shouldCloseOnEsc
+      shouldCloseOnOverlayClick
+      shouldReturnFocusAfterClose
+      style={{
+        content: {
+          "--gallery-bg": theme === "dark" ? "#20252b" : "#ffffff",
+          "--gallery-text": theme === "dark" ? "#f4f4f4" : "#20252b",
+        },
+      }}
+    >
+      <div className="pfe-gallery-heading">
+        <h2 id="pfe-gallery-title" className="pfe-gallery-title">
+          {recentProjects.title[language]}
+        </h2>
+        <button
+          ref={closeButtonRef}
+          type="button"
+          className="pfe-gallery-close"
+          onClick={onClose}
+          aria-label={isFrench ? "Fermer la galerie" : "Close gallery"}
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div className="pfe-gallery-stage">
+        <button
+          type="button"
+          className="pfe-gallery-nav"
+          onClick={() => navigate(-1)}
+          aria-label={isFrench ? "Image précédente" : "Previous image"}
+          disabled={galleryImages.length < 2}
+        >
+          <span aria-hidden="true">‹</span>
+        </button>
+        <figure className="pfe-gallery-figure">
+          <GalleryImage
+            key={currentImage.src}
+            image={currentImage}
+            caption={caption}
+            language={language}
+          />
+          <figcaption className="pfe-gallery-caption" aria-live="polite">
+            {imageIndex + 1} / {galleryImages.length} — {caption}
+          </figcaption>
+        </figure>
+        <button
+          type="button"
+          className="pfe-gallery-nav"
+          onClick={() => navigate(1)}
+          aria-label={isFrench ? "Image suivante" : "Next image"}
+          disabled={galleryImages.length < 2}
+        >
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+      <div
+        className="pfe-gallery-thumbnails"
+        aria-label={isFrench ? "Captures du projet" : "Project screenshots"}
+      >
+        {galleryImages.map((image, index) => (
+          <button
+            key={image.src}
+            type="button"
+            className="pfe-gallery-thumbnail"
+            aria-current={imageIndex === index ? "true" : undefined}
+            aria-label={`${isFrench ? "Voir la capture" : "View screenshot"} ${
+              index + 1
+            } : ${image.caption[language]}`}
+            onClick={() => setImageIndex(index)}
+          >
+            <img src={image.src} alt="" loading="lazy" decoding="async" />
+          </button>
+        ))}
+      </div>
+    </Modal>
+  );
+};
+
 const BodyComp = ({ language, theme }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [galleryIsOpen, setGalleryIsOpen] = useState(false);
   const themeClass = theme === "dark" ? "body-dark" : "body-light";
 
   const [likeCount, setLikeCount] = useState(0);
@@ -81,6 +319,13 @@ const BodyComp = ({ language, theme }) => {
 
   return (
     <div className={`body-container ${themeClass}`}>
+      <style>{galleryStyles}</style>
+      <ProjectGallery
+        isOpen={galleryIsOpen}
+        onClose={() => setGalleryIsOpen(false)}
+        language={language}
+        theme={theme}
+      />
       <div className="left">
         <section className="about">
           <article>
@@ -91,17 +336,25 @@ const BodyComp = ({ language, theme }) => {
         <section className="projects">
           <h2>{body.project[language]}</h2>
           <article>
-            <a
-              href="https://imgur.com/a/hKTAcYf"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              className="pfe-gallery-trigger"
+              aria-haspopup="dialog"
+              aria-label={language === "french"
+                ? "Ouvrir la galerie du projet PFE Management"
+                : "Open the PFE Management project gallery"}
+              onClick={() => setGalleryIsOpen(true)}
             >
               <img
                 className="featured-img"
                 src={recentProjects.image}
-                alt="slug"
+                alt={recentProjects.title[language]}
               />
-            </a>
+              <span className="pfe-gallery-hint" aria-hidden="true">
+                {galleryImages.length} {language === "french"
+                  ? "captures · Agrandir" : "screenshots · Enlarge"}
+              </span>
+            </button>
             <div className="project-info">
               <h3>{recentProjects.title[language]}</h3>
               <p>
