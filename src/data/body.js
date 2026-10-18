@@ -138,7 +138,7 @@ export const projects = [
 
   // PIM-SIM Project (Web and Mobile)
   {
-    id: 3,
+    id: 2,
     image: "https://i.imgur.com/YtKFJTe.png?4",
     imgLink: "https://imgur.com/a/dptXZcG",
     title: {
@@ -176,7 +176,7 @@ export const projects = [
 
   // Social Goal Sharing Project (Android)
   {
-    id: 4,
+    id: 3,
     image: "https://i.imgur.com/2P2czR1.png",
     imgLink: "https://imgur.com/a/IyY7koE",
     title: {
@@ -203,7 +203,7 @@ export const projects = [
 
   // Smart ESPRIT Project (Linux)
   {
-    id: 5,
+    id: 4,
     image: "https://i.imgur.com/s6B6x8H.png",
     imgLink: "https://i.imgur.com/s6B6x8H.png",
     title: {

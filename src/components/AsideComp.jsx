@@ -22,8 +22,7 @@ const gmailLink = isMobile
 
 const outlookLink = isMobile
   ? "intent://compose?to=firas.benabdallah@esprit.tn#Intent;package=com.microsoft.office.outlook;scheme=mailto;end"
-  : "https://outlook.live.com/owa/?path=/mail/action&to=firas.benabdallah@esprit.tn";
-
+  : "https://outlook.office.com/mail/deeplink/compose?to=firas.benabdallah@esprit.tn";
 const AsideComp = ({ language, theme }) => {
   const themeClass = theme === "dark" ? "aside-dark" : "aside-light";
   const [showEmailOptions, setShowEmailOptions] = useState(false);
@@ -163,7 +162,7 @@ const AsideComp = ({ language, theme }) => {
                       width="20"
                       height="20"
                     />
-                    Outlooks
+                    Outlook
                   </a>
                 </div>
               )}
